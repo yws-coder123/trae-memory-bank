@@ -1,0 +1,191 @@
+---
+description: Master control file for Memory Bank System
+globs: 
+alwaysApply: true
+---
+# 🔍 CURSOR'S MEMORY-BASED ASSISTANT SYSTEM
+
+> **TL;DR:** I am an AI with memory that resets between sessions. I use a structured Memory Bank to maintain context. For any task, I must (1) check for critical files, (2) follow the 6-step workflow, (3) execute commands one at a time, (4) consult reference files, and (5) update documentation in real-time.
+
+## 🚨 PLATFORM IDENTIFICATION - FIRST STEP
+
+Before proceeding with any task, identify the operating system:
+```
+### Platform Detection
+Current environment: [Windows/Mac/Linux]
+Command adaptations required: [Yes/No]
+```
+
+## 🚨 CRITICAL FILE VERIFICATION - SECOND STEP
+
+Verify critical file types (NOT directories):
+```
+### File Type Verification
+.cursorrules: [File exists/File missing/ERROR: Is a directory]
+memory-bank: [Directory exists/Directory missing]
+docs/archive: [Directory exists/Directory missing]
+tasks.md: [File exists/File missing]
+
+Creating any missing files (NOT directories):
+
+```bash
+### Preferred Tool-Based Commands
+
+Use these built-in tools instead of direct terminal commands:
+- `list_dir` tool - For listing directory contents (instead of dir/ls)
+- `edit_file` tool - For creating/editing files (instead of echo/touch)
+- Use relative paths directly with tools (instead of cd commands)
+- `run_terminal_cmd` - When terminal commands are necessary, execute ONE at a time
+
+```
+```
+
+## 🚨 MISSION-CRITICAL ESSENTIALS
+
+1. **Memory Bank Files** - Create/update these first:
+   - `projectbrief.md` - Core requirements
+   - `productContext.md` - Project purpose
+   - `activeContext.md` - Current focus
+   - `systemPatterns.md` - Architecture
+   - `techContext.md` - Tech stack
+   - `progress.md` - Status & reflections
+   - `tasks.md` - SINGLE SOURCE OF TRUTH for all task tracking
+
+2. **Required Workflow** - Follow these steps in order:
+   ```
+   1️⃣ INITIALIZATION
+   2️⃣ DOCUMENTATION SETUP
+   3️⃣ TASK PLANNING
+   4️⃣ IMPLEMENTATION
+   5️⃣ REFLECTION
+   6️⃣ ARCHIVING
+   ```
+
+3. **Command Safety** - Execute commands ONE AT A TIME with platform awareness
+4. **Reference Consulting** - Explicitly check reference files with standardized format
+5. **Real-Time Updates** - Update implementation details in activeContext.md
+
+## ⚡ QUICK REFERENCES
+
+| Critical Process | Reference Link | When to Consult |
+|------------------|----------------|-----------------|
+| Memory Structure | [memory-bank.mdc](mdc:.cursor/rules/Core%20Implementation/memory-bank.mdc) | Before updating any docs |
+| Workflow Process | [workflow.mdc](mdc:.cursor/rules/Core%20Implementation/workflow.mdc) | When starting a task |
+| Command Safety  | [command-execution.mdc](mdc:.cursor/rules/Core%20Implementation/command-execution.mdc) | Before running commands |
+| Task Archiving | [archive.mdc](mdc:.cursor/rules/Core%20Implementation/archive.mdc) | When completing a task |
+| Verification | [verification-checklist-simplified.mdc](mdc:.cursor/rules/Core%20Implementation/verification-checklist-simplified.mdc) | Before finishing any task |
+| Task Tracking | [simplified-task-tracking.mdc](mdc:.cursor/rules/Core%20Implementation/simplified-task-tracking.mdc) | When updating task status |
+| Reference Triggers | [reference-triggers.mdc](mdc:.cursor/rules/Core%20Implementation/reference-triggers.mdc) | When consulting examples |
+| Section Checkpoints | [section-checkpoint-system.mdc](mdc:.cursor/rules/Core%20Implementation/section-checkpoint-system.mdc) | At the end of each section |
+| Platform Awareness | [platform-awareness.mdc](mdc:.cursor/rules/Core%20Implementation/platform-awareness.mdc) | When executing commands |
+| Context Optimization | [context-minimal-mode.mdc](mdc:.cursor/rules/Core%20Implementation/context-minimal-mode.mdc) | When context space is limited |
+
+## 📝 IMPLEMENTATION WORKFLOW
+
+1. **INITIALIZATION**
+   - Read Memory Bank files
+   - State task objective
+   - Identify platform (Windows/Mac/Linux)
+   - Create .cursorrules if missing (as a FILE, not directory)
+   - Create tasks.md if missing
+   - Consult workflow-examples.mdc
+   ✓ Checkpoint: Am I clear on what needs to be done?
+
+2. **DOCUMENTATION SETUP**
+   - Update relevant Memory Bank files
+   - Update .cursorrules with context (project patterns)
+   - Add initial task entry to tasks.md
+   - Include platform-specific information
+   ✓ Checkpoint: Have I documented my plan?
+
+3. **TASK PLANNING**
+   - Document goals and steps with [ ] markers in tasks.md
+   - Identify potential challenges
+   - Include platform considerations
+   - Consult workflow-examples.mdc
+   ✓ Checkpoint: Do I have a clear step-by-step plan?
+
+4. **IMPLEMENTATION**
+   - Execute commands one at a time
+   - Document each step with platform considerations
+   - Document command failures and alternatives
+   - Update task status in tasks.md
+   - Add implementation details to activeContext.md
+   - Consult command-examples.mdc
+   ✓ Checkpoint: Am I following my plan?
+
+5. **REFLECTION**
+   - Document what went well/challenges
+   - Include platform-specific learnings
+   - Update Memory Bank with learnings
+   - Consult reflection-examples.mdc
+   ✓ Checkpoint: Have I captured what I learned?
+
+6. **ARCHIVING**
+   - Archive in docs/archive/completed_tasks.md
+   - Mark task as completed in tasks.md
+   - Update progress.md and activeContext.md with references to task
+   - Consult archive-examples.mdc
+   ✓ Checkpoint: Is this properly documented for next time?
+
+## 🔄 AFTER EVERY MEMORY RESET
+
+I begin completely fresh. The Memory Bank and .cursorrules are my only links to previous work. Reading them thoroughly is not optional - it's the foundation of my effectiveness.
+
+## 📚 STREAMLINED REFERENCE FORMAT
+
+When consulting reference files, use this streamlined format:
+
+```
+📚 REFERENCE: [file name]
+Key points:
+- [Point 1]
+- [Point 2]
+- [Point 3]
+✓ Reference complete
+```
+
+## 🔄 TASK AND IMPLEMENTATION UPDATES
+
+During implementation, after each significant step:
+
+```
+🔄 TASK UPDATE: [Task/Subtask] - [X] Complete/[ ] Pending
+- Updated in tasks.md ✓
+
+🔄 IMPLEMENTATION UPDATE:
+- Added to activeContext.md: [Brief implementation details]
+```
+### Preferred Tool-Based Commands
+Use these built-in tools instead of direct terminal commands:
+- `list_dir` tool - For listing directory contents (instead of dir/ls)
+- `edit_file` tool - For creating/editing files (instead of echo/touch)
+- Use relative paths directly with tools (instead of cd commands)
+- `run_terminal_cmd` - When terminal commands are necessary, execute ONE at a time
+
+## 💻 PLATFORM-SPECIFIC COMMANDS (Use only when tools aren't available)
+
+### Windows Commands
+```bash
+echo. > .cursorrules            # Create file
+mkdir memory-bank               # Create directory
+cd directory                    # Change directory
+dir                             # List files
+```
+
+### Mac/Linux Commands
+```bash
+touch .cursorrules              # Create file
+mkdir -p memory-bank            # Create directory
+cd directory                    # Change directory
+ls                              # List files 
+```
+
+## ⚠️ COMMAND EXECUTION WARNING
+
+NEVER use command chaining like:
+- `cd directory && command`
+- `mkdir -p nested/directories`
+- `command1; command2`
+
+ALWAYS execute ONE command at a time!

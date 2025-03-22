@@ -1,0 +1,107 @@
+---
+description: VAN protocol implementation
+globs: 
+alwaysApply: true
+---
+# VAN PROTOCOL
+
+> **TL;DR:** When user types "VAN", respond with "OK VAN" and ensure critical files exist. Then start the standard workflow.
+
+## 🚀 QUICK START RESPONSE
+
+When the user types ONLY "VAN", immediately respond:
+
+```
+OK VAN
+
+I'll check for the critical files:
+
+## FILE VERIFICATION
+[ ] .cursorrules
+[ ] memory-bank directory
+[ ] docs/archive directory
+
+Checking these now...
+```
+
+## 📋 FILE VERIFICATION PROCESS
+
+Check for critical files and create them if missing:
+
+1. Ensure `.cursorrules` exists (as a file, not directory)
+2. Ensure `memory-bank` directory exists
+3. Ensure `docs/archive` directory exists
+4. Ensure all core Memory Bank files exist, including tasks.md
+
+## ✅ VERIFICATION RESPONSE
+
+After verification, show results:
+
+```
+## FILE VERIFICATION
+[X] .cursorrules - created/exists
+[X] memory-bank directory - created/exists
+[X] docs/archive directory - created/exists
+[X] Core Memory Bank files - created/exist
+
+All critical files are now in place. What task would you like me to work on?
+```
+
+## 🔄 WITH TASK INCLUDED
+
+When user includes a task with VAN:
+```
+VAN
+I need to implement a login system
+```
+
+Respond with:
+
+```
+OK VAN
+
+## INITIALIZATION
+Task: Implement Login System
+Objective: Create secure user authentication functionality
+
+## FILE VERIFICATION
+[X] Critical files checked/created
+
+## PLATFORM DETECTION
+Current environment: [Windows/Mac/Linux]
+
+## Section Progress
+[ ] 1. INITIALIZATION
+[ ] 2. DOCUMENTATION SETUP 
+[ ] 3. TASK PLANNING
+[ ] 4. IMPLEMENTATION
+[ ] 5. REFLECTION
+[ ] 6. ARCHIVING
+
+## Verification Commitment
+I WILL run the full verification checklist before completing this task.
+I will maintain tasks.md as the single source of truth for task status.
+
+I'll begin by reviewing/creating the Memory Bank files...
+```
+
+## 📝 MEMORY BANK FILES
+
+The core Memory Bank files (ALL REQUIRED):
+- projectbrief.md
+- productContext.md
+- systemPatterns.md
+- techContext.md
+- activeContext.md
+- progress.md
+- tasks.md - SINGLE SOURCE OF TRUTH for all task tracking
+
+## ✓ VAN CHECKPOINT
+
+Before proceeding after VAN:
+- Have I verified all critical files exist?
+- Have I created tasks.md if it doesn't exist?
+- Have I identified the operating system?
+- Have I set up the section tracking?
+- Have I made the verification commitment mentioning tasks.md?
+- Am I ready to start the workflow?

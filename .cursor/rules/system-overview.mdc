@@ -1,0 +1,115 @@
+---
+description: High-level overview of the Memory Bank System
+globs: 
+alwaysApply: false
+---
+# MEMORY BANK SYSTEM OVERVIEW
+
+> **TL;DR:** This system uses structured documentation as AI memory across sessions. It has a 6-step workflow, strategically organized content, and verification mechanisms. Tasks.md serves as the single source of truth for task tracking.
+
+## 🎯 SYSTEM PURPOSE
+
+The Memory Bank System creates persistent memory for AI assistants through structured documentation. It addresses the fundamental limitation of LLMs forgetting context between interactions.
+
+## 🧠 CORE PRINCIPLES
+
+1. **Documentation as Memory** - Documentation is mission-critical infrastructure
+2. **Strategic Organization** - Balance between core files and detailed examples
+3. **Single Source of Truth** - Tasks.md is the only place for task status tracking
+4. **Verification Steps** - Explicit checks prevent steps from being skipped
+5. **Reference Triggers** - Force documentation consultation at critical points
+6. **Processing Efficiency** - Optimized structure for LLM comprehension
+
+## 📏 RULE TYPES
+
+### 1️⃣ Always-Applied Rules
+```
+---
+description: 
+globs: 
+alwaysApply: true
+---
+```
+- Applied to every command regardless of context
+- Used for critical rules that must always be followed
+- Kept concise to minimize context window usage
+- Examples: main.mdc, verification-checklist-simplified.mdc
+
+### 2️⃣ Auto-Attached Rules
+```
+---
+description: 
+globs: "**/memory-bank/**", "**/.cursorrules"
+alwaysApply: false
+---
+```
+- Applied when working with matching file patterns
+- Used for context-specific rules
+- Can be more detailed since only loaded when relevant
+- Examples: memory-bank.mdc, simplified-task-tracking.mdc
+
+### 3️⃣ Agent-Requested Rules
+```
+---
+description: CRITICAL: Contains mandatory examples. DO NOT assume patterns without consulting.
+globs: "**/src/**"
+alwaysApply: false
+---
+```
+- Agent explicitly instructed to read these files
+- Used for detailed examples and verbose content
+- Helps manage context window by moving details out of main files
+- Examples: workflow-examples.mdc, command-examples.mdc
+
+## 📁 DIRECTORY STRUCTURE
+
+```
+.cursor/rules/
+├── main.mdc                      # Master file with references
+├── system-overview.mdc           # High-level system overview
+├── Core Implementation/          # Core protocol files
+├── Extended Details/             # Detailed examples
+└── Templates/                    # File templates
+
+Project Root:
+├── memory-bank/                  # Documentation directory
+│   ├── projectbrief.md           # Requirements and goals
+│   ├── productContext.md         # Why this project exists
+│   ├── activeContext.md          # Current work focus
+│   ├── systemPatterns.md         # Architecture patterns
+│   ├── techContext.md            # Technologies used
+│   ├── progress.md               # Implementation status
+│   └── tasks.md                  # Task tracking (single source of truth)
+├── .cursorrules                  # Project-specific patterns (no task tracking)
+└── docs/archive/
+    └── completed_tasks.md        # Archived completed tasks
+```
+
+## 🔄 REFERENCE TRIGGER PATTERN
+
+Main files include explicit reference triggers:
+
+```
+⚠️ Before implementing any commands, I MUST read command-examples.mdc
+```
+
+This creates verification steps that force documentation consultation before proceeding.
+
+## 📋 IMPLEMENTATION WORKFLOW
+
+1. **INITIALIZATION** - Review Memory Bank, state task objective
+2. **DOCUMENTATION SETUP** - Update relevant Memory Bank files
+3. **TASK PLANNING** - Document step-by-step plan with [ ] markers in tasks.md
+4. **IMPLEMENTATION** - Execute commands one at a time, update status in tasks.md
+5. **REFLECTION** - Document learnings and next steps
+6. **ARCHIVING** - Archive completed tasks with proper format
+
+## 💡 BEST PRACTICES
+
+- Keep core files concise (200-300 lines maximum)
+- Move detailed examples to extended files
+- Add reference triggers for detailed documentation
+- Use appropriate rule types for each file's purpose
+- Document reference relationships between files
+- Maintain tasks.md as the single source of truth for task status
+- Use references instead of duplicating task information

@@ -1,0 +1,93 @@
+---
+description: Task status tracking protocol (Single Source of Truth)
+globs: "**/memory-bank/tasks.md", "**/memory-bank/activeContext.md", "**/memory-bank/progress.md"
+alwaysApply: false
+---
+# SIMPLIFIED TASK TRACKING PROTOCOL
+
+> **TL;DR:** Use tasks.md as the SINGLE SOURCE OF TRUTH for all task tracking. Other files should reference tasks but not duplicate status information.
+
+## 🚨 SINGLE SOURCE OF TRUTH RULE
+
+Tasks.md is the ONLY file that should contain task status tracking:
+- Use [ ] for pending tasks
+- Use [X] for completed tasks
+
+## 📝 TASKS.MD STRUCTURE
+
+```markdown
+# Project Tasks
+
+## Current Tasks
+- [ ] Task 1: Description and details
+  - [ ] Subtask 1.1
+  - [ ] Subtask 1.2
+- [ ] Task 2: Description and details
+
+## Completed Tasks
+- [X] Task 3: Completed on YYYY-MM-DD
+- [X] Task 4: Completed on YYYY-MM-DD
+```
+
+## 🔄 TASK UPDATE PROCESS
+
+When updating a task status:
+
+1. Update tasks.md with status change
+2. Reference (don't duplicate) in other files
+
+```
+🔄 TASK UPDATE: [Task name] - [X] Complete/[ ] Pending
+- Updated in tasks.md ✓
+- Referenced in activeContext.md ✓
+```
+
+## 📋 REFERENCE FORMAT FOR OTHER FILES
+
+### In activeContext.md:
+```markdown
+## Current Focus
+Current task: [Task name] (see tasks.md)
+Recent updates:
+- [Component] implemented
+- Working on [specific aspect]
+```
+
+### In progress.md:
+```markdown
+## Implementation Progress
+- [Component] - Completed, see tasks.md for details
+- [Component] - In progress, see tasks.md for details
+```
+
+### In .cursorrules:
+```markdown
+# Project Intelligence
+(No task tracking - only project patterns)
+
+## Project Patterns
+- [Pattern 1]: [Description]
+- [Pattern 2]: [Description]
+```
+
+## 🔄 REAL-TIME UPDATES
+
+During implementation, add updates to activeContext.md:
+
+```
+🔄 UPDATE: [Component] - [Status]
+Added to activeContext.md:
+- [Brief details of implementation]
+```
+
+## ✓ TASK VERIFICATION CHECKPOINT
+
+Before completing any task:
+```
+✓ TASK VERIFICATION:
+- Task status updated in tasks.md? [YES/NO]
+- Implementation details added to activeContext.md? [YES/NO]
+- Progress reflected in progress.md? [YES/NO]
+```
+
+This simplified approach eliminates redundancy while maintaining comprehensive task tracking through a single source of truth.

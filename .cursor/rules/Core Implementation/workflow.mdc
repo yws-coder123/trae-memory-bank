@@ -1,0 +1,266 @@
+---
+description: Structured workflow implementation protocol
+globs: **/src/**", "**/.cursorrules", "**/memory-bank/**
+alwaysApply: true
+---
+# STRUCTURED WORKFLOW PROTOCOL
+
+> **TL;DR:** Follow a 6-step workflow in exact sequence. ALWAYS update section tracking after completing each section. Update task status ONLY in tasks.md. Add implementation details to activeContext.md.
+
+## 🚨 SECTION TRANSITION MARKERS
+
+These visual markers indicate workflow section transitions:
+
+```
+======== INITIALIZATION COMPLETE ⟹ STARTING DOCUMENTATION SETUP ========
+
+======== DOCUMENTATION SETUP COMPLETE ⟹ STARTING TASK PLANNING ========
+
+======== TASK PLANNING COMPLETE ⟹ STARTING IMPLEMENTATION ========
+
+======== IMPLEMENTATION COMPLETE ⟹ STARTING REFLECTION ========
+
+======== REFLECTION COMPLETE ⟹ STARTING ARCHIVING ========
+
+======== ARCHIVING COMPLETE ⟹ TASK FINISHED ========
+```
+
+## 🗂️ WORKFLOW SECTIONS
+
+These 6 sections must be completed in this exact order:
+
+1. **INITIALIZATION** - Establish context, identify platform
+2. **DOCUMENTATION SETUP** - Update Memory Bank
+3. **TASK PLANNING** - Create step-by-step plan in tasks.md
+4. **IMPLEMENTATION** - Execute commands
+5. **REFLECTION** - Document learnings
+6. **ARCHIVING** - Store completed work
+
+## 📋 SECTION TRACKING TEMPLATE
+
+Add this at the start of every task:
+```
+## Section Progress
+[ ] 1. INITIALIZATION
+[ ] 2. DOCUMENTATION SETUP 
+[ ] 3. TASK PLANNING
+[ ] 4. IMPLEMENTATION
+[ ] 5. REFLECTION
+[ ] 6. ARCHIVING
+```
+
+## 🔄 SIMPLIFIED SECTION UPDATE TEMPLATE
+
+After completing each section, use this simpler template:
+```
+🔄 SECTION: [Section name] COMPLETE
+[X] Updated section tracking
+```
+
+Then add the appropriate section transition marker.
+
+## 📚 STREAMLINED REFERENCE CHECK
+
+At the start of each section, use this streamlined format:
+
+```
+📚 REFERENCE: [file name]
+Key points:
+- [Point 1]
+- [Point 2]
+- [Point 3]
+✓ Reference complete
+```
+
+## 1️⃣ INITIALIZATION
+
+**Purpose:** Orient yourself, establish task goals, and identify platform requirements
+
+**Required steps:**
+- [ ] Review ALL Memory Bank files
+- [ ] State current task name and objective
+- [ ] Identify platform (Windows/Mac/Linux) and document requirements
+- [ ] Review/create .cursorrules file (as a FILE, not directory)
+- [ ] Complete the reference check
+- [ ] Make verification commitment
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: INITIALIZATION
+- ALL Memory Bank files reviewed? [YES/NO]
+- Task objective clearly stated? [YES/NO]
+- Platform identified and documented? [YES/NO]
+- .cursorrules file created/updated? [YES/NO]
+- Reference check completed? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: Ready for DOCUMENTATION SETUP
+→ If any NO: Fix missing items before proceeding
+```
+
+## 2️⃣ DOCUMENTATION SETUP
+
+**Purpose:** Update documentation with current plans and platform considerations
+
+**Required steps:**
+- [ ] Update specific Memory Bank files:
+  * `systemPatterns.md` - Design decisions
+  * `techContext.md` - Resources/tools and platform-specific information
+  * `activeContext.md` - Implementation plan
+  * `progress.md` - Milestones/challenges
+  * `tasks.md` - Create initial task entry
+- [ ] Update .cursorrules with new context and platform requirements
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: DOCUMENTATION SETUP
+- systemPatterns.md updated? [YES/NO]
+- techContext.md updated with platform information? [YES/NO]
+- activeContext.md updated? [YES/NO]
+- progress.md updated? [YES/NO]
+- tasks.md created/updated with initial task? [YES/NO]
+- .cursorrules updated? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: Ready for TASK PLANNING
+→ If any NO: Fix missing items before proceeding
+```
+
+## 3️⃣ TASK PLANNING
+
+**Purpose:** Create a clear roadmap for implementation with platform awareness
+
+**Required elements:**
+- [ ] Goals and success criteria
+- [ ] Required resources/tools
+- [ ] Step-by-step plan with [ ] markers in tasks.md
+- [ ] Platform-specific considerations for each step
+- [ ] Testing/validation approach
+- [ ] Complete the reference check
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: TASK PLANNING
+- Goals and success criteria documented? [YES/NO]
+- Resources/tools identified? [YES/NO]
+- Step-by-step plan created with [ ] markers in tasks.md? [YES/NO]
+- Platform-specific considerations documented? [YES/NO]
+- Testing/validation approach defined? [YES/NO]
+- Reference check completed? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: Ready for IMPLEMENTATION
+→ If any NO: Fix missing items before proceeding
+```
+
+## 4️⃣ IMPLEMENTATION
+
+**Purpose:** Execute your plan systematically with real-time documentation updates
+
+**Critical Implementation Reminders:**
+```
+⚠️ REMEMBER: 
+- Execute ONE command at a time
+- Update task status ONLY in tasks.md
+- Add implementation details to activeContext.md
+```
+
+**For each step:**
+- [ ] Document current step 
+- [ ] Complete the reference check
+- [ ] Execute ONE command at a time with platform awareness
+- [ ] Document results (success or failure)
+- [ ] If command fails, document alternative approach
+- [ ] Update task status in tasks.md
+- [ ] Add implementation details to activeContext.md
+
+**Simplified Update Format:**
+```
+🔄 TASK UPDATE: [Task/Subtask] - [X] Complete/[ ] Pending
+- Updated in tasks.md ✓
+- Implementation details added to activeContext.md ✓
+```
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: IMPLEMENTATION
+- All planned steps completed? [YES/NO]
+- Command results documented? [YES/NO]
+- Alternative approaches documented where needed? [YES/NO]
+- Task statuses updated in tasks.md? [YES/NO]
+- Implementation details added to activeContext.md? [YES/NO]
+- Reference check completed? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: Ready for REFLECTION
+→ If any NO: Fix missing items before proceeding
+```
+
+## 5️⃣ REFLECTION
+
+**Purpose:** Capture learnings for future reference, including platform-specific insights
+
+**Four required subsections:**
+1. What Went Well (≥3 items)
+2. Challenges (≥2 items)
+3. Lessons Learned (≥3 items)
+4. Improvements for Next Time (≥3 items)
+
+**Platform-Specific Reflection:**
+- Include platform-specific challenges and solutions
+- Document command adaptations that worked well
+- Note any platform-specific improvements for next time
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: REFLECTION
+- "What Went Well" section with ≥3 items? [YES/NO]
+- "Challenges" section with ≥2 items? [YES/NO]
+- "Lessons Learned" section with ≥3 items? [YES/NO]
+- "Improvements for Next Time" section with ≥3 items? [YES/NO]
+- Platform-specific insights included? [YES/NO]
+- Memory Bank files updated with learnings? [YES/NO]
+- Reference check completed? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: Ready for ARCHIVING
+→ If any NO: Fix missing items before proceeding
+```
+
+## 6️⃣ ARCHIVING
+
+**Purpose:** Preserve completed work for future reference
+
+**Required steps:**
+- [ ] Create archive structure if missing
+- [ ] Complete the reference check
+- [ ] Archive task with proper format, including platform-specific insights
+- [ ] Mark task as completed in tasks.md
+- [ ] Update progress.md with reference to completed task
+- [ ] Update activeContext.md with next focus
+
+✓ **End-of-Section Checkpoint:**
+```
+✓ SECTION CHECKPOINT: ARCHIVING
+- Archive entry created with all 4 sections? [YES/NO]
+- Platform-specific insights included? [YES/NO]
+- Task marked as completed in tasks.md? [YES/NO]
+- progress.md updated with reference to completed task? [YES/NO]
+- activeContext.md updated with next focus? [YES/NO]
+- All template/placeholder text removed? [YES/NO]
+- Reference check completed? [YES/NO]
+- Section tracking updated to [X]? [YES/NO]
+
+→ If all YES: TASK COMPLETE
+→ If any NO: Fix missing items before proceeding
+```
+
+## ✅ FINAL VERIFICATION
+
+Before finishing, verify:
+- [ ] All 6 sections completed (all [X] in tracking)
+- [ ] All required reference files consulted
+- [ ] Implementation details added to activeContext.md
+- [ ] Task status updated in tasks.md
+- [ ] Platform-specific information documented
+- [ ] All verification steps passed
