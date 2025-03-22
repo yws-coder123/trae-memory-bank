@@ -1,0 +1,62 @@
+flowchart TD
+    subgraph "Initial Setup"
+        start([Start Task]) --> checkFiles{File Verification}
+        checkFiles -->|Missing| createFiles[Create Missing Files]
+        createFiles --> platformDetect
+        checkFiles -->|Exist| platformDetect[Platform Detection]
+    end
+
+    subgraph "Core Workflow"
+        platformDetect --> init[INITIALIZATION]
+        init --> checkMB{Review ALL Memory Bank Files}
+        checkMB -->|Heavy Context Load| docSetup[DOCUMENTATION SETUP]
+        
+        docSetup --> updateMB[Update Memory Bank Files]
+        updateMB -->|Multiple Files| planning[TASK PLANNING]
+        
+        planning --> taskPlan[Create Task Plan in tasks.md]
+        taskPlan --> impl[IMPLEMENTATION]
+        
+        impl --> execCmd[Execute Commands]
+        execCmd -->|One at a Time| updateTask[Update task.md]
+        updateTask --> addImpl[Add Details to activeContext.md]
+        addImpl -->|More Steps?| execCmd
+        addImpl -->|Complete| reflect[REFLECTION]
+        
+        reflect --> reflect4Sections[Document 4 Required Sections]
+        reflect4Sections -->|Heavy Content Creation| archive[ARCHIVING]
+        
+        archive --> archiveTask[Create Archive Entry]
+        archiveTask --> crossLink[Create Cross-Links]
+        crossLink --> verify[Run Verification]
+    end
+
+    subgraph "Verification System"
+        verify --> checkAll{All Checks Pass?}
+        checkAll -->|No| fixIssues[Fix Issues]
+        fixIssues --> verify
+        checkAll -->|Yes| complete([Task Complete])
+    end
+
+    %% Bottleneck Styling
+    classDef bottleneck fill:#f96, stroke:#333, stroke-width:2px
+    classDef heavyProcess fill:#c9e, stroke:#333, stroke-width:2px
+    classDef checkpoint fill:#9cf, stroke:#333
+    
+    %% Bottlenecks
+    class checkMB,updateMB,execCmd,reflect4Sections bottleneck
+    class createFiles,taskPlan,crossLink,addImpl heavyProcess
+    class checkFiles,updateTask,checkAll checkpoint
+    
+    %% Reference Points
+    subgraph "Reference Requirements"
+        ref1[workflow-examples.mdc]
+        ref2[command-examples.mdc]
+        ref3[reflection-examples.mdc]
+        ref4[archive-examples.mdc]
+    end
+    
+    init -.-> ref1
+    impl -.-> ref2
+    reflect -.-> ref3
+    archive -.-> ref4
