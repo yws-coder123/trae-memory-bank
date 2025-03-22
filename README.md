@@ -470,4 +470,8 @@ If you encounter issues implementing the Memory Bank System, please:
 
 ## 🙏 Acknowledgments
 
-This architecture is designed to optimize AI assistant capabilities within the Cursor IDE, creating a truly persistent development partner that can adapt to any operating system and maintain clear documentation through a structured workflow that scales with task complexity. 
+This architecture is designed to optimize AI assistant capabilities within the Cursor IDE, creating a truly persistent development partner that can adapt to any operating system and maintain clear documentation through a structured workflow that scales with task complexity.
+
+Special thanks to:
+- [@ipenywis](https://gist.github.com/ipenywis) for their contributions to memory systems for AI assistants
+- [Cursor Memory Bank Gist](https://gist.github.com/ipenywis/1bdb541c3a612dbac4a14e1e3f4341ab) which provided valuable insights for this implementation 
