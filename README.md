@@ -24,8 +24,6 @@ The Cursor Memory Bank System creates a **structured external memory** for your 
 - **Procedurally Verified**: Built-in checkpoints ensure completeness
 - **Platform-Aware**: Adapts to your operating system automatically
 
-![Memory Bank System](https://i.imgur.com/YOUR_DIAGRAM_HERE.png)
-
 ## How It Works: Strategic Context Management
 
 The Memory Bank System solves the context limitations of LLMs through three key innovations:
