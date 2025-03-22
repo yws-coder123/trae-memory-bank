@@ -1,62 +1,89 @@
 flowchart TD
-    subgraph "Initial Setup"
-        start([Start Task]) --> checkFiles{File Verification}
-        checkFiles -->|Missing| createFiles[Create Missing Files]
+    %% Define styles
+    classDef process fill:#f4f4f4,stroke:#333,stroke-width:1px,border-radius:5px
+    classDef decision fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,border-radius:10px
+    classDef bottleneck fill:#f8cecc,stroke:#b85450,stroke-width:1px,border-radius:5px
+    classDef checkpoint fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:5px
+    classDef section fill:#fff2cc,stroke:#d6b656,stroke-width:1px,rounded:true
+    
+    %% Initial Setup section
+    subgraph Setup ["1. INITIAL SETUP"]
+        direction LR
+        start([Start]) --> checkFiles{File<br>Check}
+        checkFiles -->|Missing| createFiles[Create Files]
+        checkFiles -->|Exist| platformDetect[Platform<br>Detection]
         createFiles --> platformDetect
-        checkFiles -->|Exist| platformDetect[Platform Detection]
     end
-
-    subgraph "Core Workflow"
-        platformDetect --> init[INITIALIZATION]
-        init --> checkMB{Review ALL Memory Bank Files}
-        checkMB -->|Heavy Context Load| docSetup[DOCUMENTATION SETUP]
-        
-        docSetup --> updateMB[Update Memory Bank Files]
-        updateMB -->|Multiple Files| planning[TASK PLANNING]
-        
-        planning --> taskPlan[Create Task Plan in tasks.md]
-        taskPlan --> impl[IMPLEMENTATION]
-        
-        impl --> execCmd[Execute Commands]
-        execCmd -->|One at a Time| updateTask[Update task.md]
-        updateTask --> addImpl[Add Details to activeContext.md]
-        addImpl -->|More Steps?| execCmd
-        addImpl -->|Complete| reflect[REFLECTION]
-        
-        reflect --> reflect4Sections[Document 4 Required Sections]
-        reflect4Sections -->|Heavy Content Creation| archive[ARCHIVING]
-        
-        archive --> archiveTask[Create Archive Entry]
-        archiveTask --> crossLink[Create Cross-Links]
-        crossLink --> verify[Run Verification]
+    
+    %% Planning section
+    subgraph Planning ["2. PLANNING PHASE"]
+        direction LR
+        init[INITIALIZATION] --> checkMB{Review<br>Memory Bank}
+        checkMB --> docSetup[DOC SETUP]
+        docSetup --> updateMB[Update MB]
+        updateMB --> planning[TASK PLANNING]
+        planning --> taskPlan[Create Plan<br>in tasks.md]
     end
-
-    subgraph "Verification System"
-        verify --> checkAll{All Checks Pass?}
+    
+    %% Implementation section
+    subgraph Implementation ["3. IMPLEMENTATION"]
+        direction LR
+        impl[IMPLEMENTATION] --> execCmd[Execute<br>Commands]
+        execCmd -->|One at a Time| updateTask[Update<br>tasks.md]
+        updateTask --> addImpl[Update<br>activeContext]
+        addImpl -->|More Steps| execCmd
+        addImpl -->|Complete| reflectStart[Ready for<br>Reflection]
+    end
+    
+    %% Reflection and Archiving
+    subgraph Completion ["4. COMPLETION"]
+        direction LR
+        reflect[REFLECTION] --> reflect4[Document<br>4 Sections]
+        reflect4 --> archive[ARCHIVING]
+        archive --> archiveTask[Create<br>Archive]
+        archiveTask --> crossLink[Create<br>Cross-Links]
+    end
+    
+    %% Verification System section
+    subgraph Verification ["5. VERIFICATION"]
+        direction LR
+        verify[Verify] --> checkAll{All Checks<br>Pass?}
         checkAll -->|No| fixIssues[Fix Issues]
         fixIssues --> verify
-        checkAll -->|Yes| complete([Task Complete])
-    end
-
-    %% Bottleneck Styling
-    classDef bottleneck fill:#f96, stroke:#333, stroke-width:2px
-    classDef heavyProcess fill:#c9e, stroke:#333, stroke-width:2px
-    classDef checkpoint fill:#9cf, stroke:#333
-    
-    %% Bottlenecks
-    class checkMB,updateMB,execCmd,reflect4Sections bottleneck
-    class createFiles,taskPlan,crossLink,addImpl heavyProcess
-    class checkFiles,updateTask,checkAll checkpoint
-    
-    %% Reference Points
-    subgraph "Reference Requirements"
-        ref1[workflow-examples.mdc]
-        ref2[command-examples.mdc]
-        ref3[reflection-examples.mdc]
-        ref4[archive-examples.mdc]
+        checkAll -->|Yes| complete([Complete])
     end
     
+    %% References connections on the side
+    subgraph References ["REFERENCE REQUIREMENTS"]
+        direction TB
+        ref1[workflow-examples]
+        ref2[command-examples]
+        ref3[reflection-examples]
+        ref4[archive-examples]
+    end
+    
+    %% Connect major sections vertically
+    Setup --> Planning
+    Planning --> Implementation
+    Implementation --> Completion
+    Completion --> Verification
+    
+    %% Connect workflow between sections
+    platformDetect --> init
+    taskPlan --> impl
+    reflectStart --> reflect
+    crossLink --> verify
+    
+    %% Connect references
     init -.-> ref1
     impl -.-> ref2
     reflect -.-> ref3
     archive -.-> ref4
+    
+    %% Apply styles
+    class start,complete process
+    class checkFiles,checkMB,checkAll decision
+    class createFiles,platformDetect,init,docSetup,planning,impl,reflect,archive,reflect4 process
+    class execCmd,updateMB bottleneck
+    class updateTask,verify checkpoint
+    class Setup,Planning,Implementation,Completion,Verification,References section
