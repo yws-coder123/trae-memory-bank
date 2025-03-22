@@ -155,6 +155,18 @@ git clone https://github.com/yourusername/cursor-memory-bank.git
 # Follow the setup instructions in docs/INSTALLATION.md
 ```
 
+## Setting Up User Rules in Cursor
+
+To enable the Memory Bank system, you need to add the global rules to Cursor's User Rules section:
+
+1. **Copy the global-rules.md content**: The file contains essential instructions for the AI assistant to follow
+2. **Open Cursor Settings**: Click on the gear icon in the bottom left or use keyboard shortcut Ctrl+, (Windows/Linux) or Cmd+, (Mac)
+3. **Navigate to User Rules**: Go to Cursor Settings > Rules > User Rules (editable section)
+4. **Paste the global-rules.md content**: Copy and paste the entire content of global-rules.md into the User Rules text box
+5. **Save your settings**: Click "Save" or "Apply" to activate the rules
+
+This manual step is necessary as Cursor requires User Rules to be explicitly added to the settings. Once added, the Memory Bank system will be active and ready to use with the "VAN" command.
+
 ## Frequently Asked Questions
 
 **Q: Will this work with any LLM?**  
