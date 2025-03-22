@@ -5,6 +5,11 @@ flowchart TD
     classDef bottleneck fill:#f8cecc,stroke:#b85450,stroke-width:1px,border-radius:5px
     classDef checkpoint fill:#d5e8d4,stroke:#82b366,stroke-width:1px,border-radius:5px
     classDef section fill:#fff2cc,stroke:#d6b656,stroke-width:1px,rounded:true
+    classDef level1 fill:#dae8fc,stroke:#6c8ebf,stroke-width:1px,rounded:true
+    classDef level2 fill:#d5e8d4,stroke:#82b366,stroke-width:1px,rounded:true
+    classDef level3 fill:#ffe6cc,stroke:#d79b00,stroke-width:1px,rounded:true
+    classDef level4 fill:#f8cecc,stroke:#b85450,stroke-width:1px,rounded:true
+    classDef creative fill:#e1d5e7,stroke:#9673a6,stroke-width:1px,rounded:true
     
     %% Initial Setup section
     subgraph Setup ["INITIAL SETUP"]
@@ -13,41 +18,67 @@ flowchart TD
         checkFiles -->|Missing| createFiles[Create Files]
         checkFiles -->|Exist| platformDetect[Platform<br>Detection]
         createFiles --> platformDetect
+        platformDetect --> complexityAssess{Assess Task<br>Complexity}
     end
     
-    %% Planning section
-    subgraph Planning ["PLANNING PHASE"]
-        direction LR
-        init[INITIALIZATION] --> checkMB{Review<br>Memory Bank}
-        checkMB --> docSetup[DOC SETUP]
-        docSetup --> updateMB[Update MB]
-        updateMB --> planning[TASK PLANNING]
-        planning --> taskPlan[Create Plan<br>in tasks.md]
+    %% Complexity Assessment
+    complexityAssess -->|Level 1| L1Flow[Quick Bug Fix]
+    complexityAssess -->|Level 2| L2Flow[Simple Enhancement]
+    complexityAssess -->|Level 3| L3Flow[Intermediate Feature]
+    complexityAssess -->|Level 4| L4Flow[Complex System]
+    
+    %% Level 1 Workflow: Quick Bug Fix
+    subgraph Level1 ["LEVEL 1: QUICK BUG FIX"]
+        direction TB
+        L1Init[INITIALIZATION] --> L1Impl[IMPLEMENTATION]
+        L1Impl --> L1Doc[DOCUMENTATION]
     end
     
-    %% Implementation section
-    subgraph Implementation ["IMPLEMENTATION"]
-        direction LR
-        impl[IMPLEMENTATION] --> execCmd[Execute<br>Commands]
-        execCmd -->|One at a Time| updateTask[Update<br>tasks.md]
-        updateTask --> addImpl[Update<br>activeContext]
-        addImpl -->|More Steps| execCmd
-        addImpl -->|Complete| reflectStart[Ready for<br>Reflection]
+    %% Level 2 Workflow: Simple Enhancement
+    subgraph Level2 ["LEVEL 2: SIMPLE ENHANCEMENT"]
+        direction TB
+        L2Init[INITIALIZATION] --> L2Doc[DOCUMENTATION]
+        L2Doc --> L2Plan[PLANNING]
+        L2Plan --> L2Impl[IMPLEMENTATION]
+        L2Impl --> L2Reflect[REFLECTION]
+        L2Reflect --> L2Archive[ARCHIVING]
     end
     
-    %% Reflection and Archiving
-    subgraph Completion ["COMPLETION"]
+    %% Level 3-4 Workflow: Full Process
+    subgraph Level3_4 ["LEVEL 3-4: FULL PROCESS"]
+        direction TB
+        L3Init[INITIALIZATION] --> L3Doc[DOCUMENTATION SETUP]
+        L3Doc --> L3Plan[TASK PLANNING]
+        L3Plan --> L3Impl[IMPLEMENTATION]
+        L3Impl --> L3Reflect[REFLECTION]
+        L3Reflect --> L3Archive[ARCHIVING]
+    end
+    
+    %% Creative Phase can occur in Implementation
+    subgraph Creative ["CREATIVE PHASE"]
+        direction TB
+        creativeStart[Enter Creative Phase] --> creativeWork[Creative Work]
+        creativeWork --> creativeEnd[Exit Creative Phase]
+        creativeEnd --> creativeUpdate[Update tasks.md]
+    end
+    
+    %% Implementation section with creative phase option
+    subgraph Implementation ["IMPLEMENTATION (ALL LEVELS)"]
         direction LR
-        reflect[REFLECTION] --> reflect4[Document<br>4 Sections]
-        reflect4 --> archive[ARCHIVING]
-        archive --> archiveTask[Create<br>Archive]
-        archiveTask --> crossLink[Create<br>Cross-Links]
+        impl[Execute Commands] -->|One at a Time| updateTask[Update<br>tasks.md]
+        updateTask --> needCreative{Need<br>Creative<br>Work?}
+        needCreative -->|Yes| enterCreative[Enter<br>Creative<br>Phase]
+        needCreative -->|No| continue[Continue<br>Implementation]
+        enterCreative -.-> creativeStart
+        creativeEnd -.-> continue
+        continue -->|More Steps| impl
+        continue -->|Complete| nextPhase[Ready for<br>Next Phase]
     end
     
     %% Verification System section
     subgraph Verification ["VERIFICATION"]
         direction LR
-        verify[Verify] --> checkAll{All Checks<br>Pass?}
+        verify[Verify<br>Level-Appropriate<br>Checklist] --> checkAll{All Checks<br>Pass?}
         checkAll -->|No| fixIssues[Fix Issues]
         fixIssues --> verify
         checkAll -->|Yes| complete([Complete])
@@ -62,28 +93,43 @@ flowchart TD
         ref4[archive-examples]
     end
     
-    %% Connect major sections vertically
-    Setup --> Planning
-    Planning --> Implementation
-    Implementation --> Completion
-    Completion --> Verification
+    %% Connect major workflows
+    L1Flow --> L1Init
+    L2Flow --> L2Init
+    L3Flow --> L3Init
+    L4Flow --> L3Init
     
-    %% Connect workflow between sections
-    platformDetect --> init
-    taskPlan --> impl
-    reflectStart --> reflect
-    crossLink --> verify
+    %% Connect implementation sections
+    L1Impl -.-> impl
+    L2Impl -.-> impl
+    L3Impl -.-> impl
+    
+    %% Connect to verification
+    L1Doc --> verify
+    L2Archive --> verify
+    L3Archive --> verify
     
     %% Connect references
-    init -.-> ref1
+    L1Init -.-> ref1
     impl -.-> ref2
-    reflect -.-> ref3
-    archive -.-> ref4
+    L2Reflect -.-> ref3
+    L3Reflect -.-> ref3
+    L2Archive -.-> ref4
+    L3Archive -.-> ref4
     
     %% Apply styles
     class start,complete process
-    class checkFiles,checkMB,checkAll decision
-    class createFiles,platformDetect,init,docSetup,planning,impl,reflect,archive,reflect4 process
-    class execCmd,updateMB bottleneck
-    class updateTask,verify checkpoint
-    class Setup,Planning,Implementation,Completion,Verification,References section
+    class checkFiles,complexityAssess,needCreative,checkAll decision
+    class createFiles,platformDetect process
+    class L1Init,L1Impl,L1Doc process
+    class L2Init,L2Doc,L2Plan,L2Impl,L2Reflect,L2Archive process
+    class L3Init,L3Doc,L3Plan,L3Impl,L3Reflect,L3Archive process
+    class impl,updateTask,enterCreative,continue,nextPhase process
+    class verify,fixIssues process
+    class creativeStart,creativeWork,creativeEnd,creativeUpdate process
+    
+    class Setup,Verification,References,Implementation section
+    class Level1 level1
+    class Level2 level2
+    class Level3_4 level3
+    class Creative creative

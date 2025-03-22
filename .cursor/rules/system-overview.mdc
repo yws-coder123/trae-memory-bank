@@ -1,24 +1,51 @@
 ---
-description: High-level overview of the Memory Bank System
+description: High-level overview of the Adaptive Memory Bank System
 globs: 
 alwaysApply: false
 ---
-# MEMORY BANK SYSTEM OVERVIEW
+# ADAPTIVE MEMORY BANK SYSTEM OVERVIEW
 
-> **TL;DR:** This system uses structured documentation as AI memory across sessions. It has a 6-step workflow, strategically organized content, and verification mechanisms. Tasks.md serves as the single source of truth for task tracking.
+> **TL;DR:** This system uses structured documentation as AI memory across sessions. It offers four complexity levels that scale from quick bug fixes to complex systems, adapting the process while maintaining documentation quality. Tasks.md serves as the single source of truth for task tracking.
 
 ## 🎯 SYSTEM PURPOSE
 
-The Memory Bank System creates persistent memory for AI assistants through structured documentation. It addresses the fundamental limitation of LLMs forgetting context between interactions.
+The Adaptive Memory Bank System creates persistent memory for AI assistants through structured documentation that scales based on task complexity. It addresses the fundamental limitation of LLMs forgetting context between interactions.
 
 ## 🧠 CORE PRINCIPLES
 
 1. **Documentation as Memory** - Documentation is mission-critical infrastructure
-2. **Strategic Organization** - Balance between core files and detailed examples
+2. **Adaptive Process Scaling** - Process complexity matches task requirements
 3. **Single Source of Truth** - Tasks.md is the only place for task status tracking
-4. **Verification Steps** - Explicit checks prevent steps from being skipped
-5. **Reference Triggers** - Force documentation consultation at critical points
-6. **Processing Efficiency** - Optimized structure for LLM comprehension
+4. **Strategic Content Organization** - Balance between core files and detailed examples
+5. **Verification Steps** - Explicit checks prevent steps from being skipped
+6. **Reference Triggers** - Force documentation consultation at critical points
+7. **Processing Efficiency** - Optimized structure for LLM comprehension
+
+## 📏 ADAPTIVE PROCESS LEVELS
+
+### Level 1: Quick Bug Fix
+- **Focus**: Simple errors, UI glitches, minor issues
+- **Process**: Streamlined with minimal documentation
+- **Task Updates**: 2-3 updates (start/end)
+- **Memory Bank Impact**: Targeted updates to relevant files
+
+### Level 2: Simple Enhancement
+- **Focus**: Small features, minor improvements
+- **Process**: Basic with essential documentation
+- **Task Updates**: 4-6 updates at key milestones
+- **Memory Bank Impact**: Updates to related files
+
+### Level 3: Intermediate Feature
+- **Focus**: Complete features, significant changes
+- **Process**: Standard with full section tracking
+- **Task Updates**: 8-12 updates at defined points
+- **Memory Bank Impact**: Comprehensive updates to most files
+
+### Level 4: Complex System
+- **Focus**: Major systems, architectural changes
+- **Process**: Full formal process with detailed checkpoints
+- **Task Updates**: 15+ updates with formal verification
+- **Memory Bank Impact**: Extensive updates to all files with cross-linking
 
 ## 📏 RULE TYPES
 
@@ -46,7 +73,7 @@ alwaysApply: false
 - Applied when working with matching file patterns
 - Used for context-specific rules
 - Can be more detailed since only loaded when relevant
-- Examples: memory-bank.mdc, simplified-task-tracking.mdc
+- Examples: memory-bank.mdc, task-tracking.mdc
 
 ### 3️⃣ Agent-Requested Rules
 ```
@@ -95,14 +122,44 @@ Main files include explicit reference triggers:
 
 This creates verification steps that force documentation consultation before proceeding.
 
-## 📋 IMPLEMENTATION WORKFLOW
+## 📋 ADAPTIVE IMPLEMENTATION WORKFLOW
 
-1. **INITIALIZATION** - Review Memory Bank, state task objective
-2. **DOCUMENTATION SETUP** - Update relevant Memory Bank files
-3. **TASK PLANNING** - Document step-by-step plan with [ ] markers in tasks.md
-4. **IMPLEMENTATION** - Execute commands one at a time, update status in tasks.md
-5. **REFLECTION** - Document learnings and next steps
-6. **ARCHIVING** - Archive completed tasks with proper format
+### Level 1: Quick Bug Fix
+1. **STREAMLINED INITIALIZATION** - Check relevant files, state bug
+2. **RAPID IMPLEMENTATION** - Fix issue, verify solution
+3. **QUICK DOCUMENTATION** - Update task status and note solution
+
+### Level 2: Simple Enhancement
+1. **BASIC INITIALIZATION** - Check relevant files, state enhancement
+2. **SIMPLE DOCUMENTATION SETUP** - Update relevant Memory Bank files
+3. **BASIC PLANNING** - Create 3-5 step plan
+4. **STANDARD IMPLEMENTATION** - Execute plan, update at key points
+5. **BRIEF REFLECTION** - Note what worked and challenges
+6. **SIMPLE ARCHIVING** - Mark task complete
+
+### Level 3: Intermediate Feature
+Full 6-step workflow with standard documentation
+
+### Level 4: Complex System
+Full 6-step workflow with comprehensive documentation and verification
+
+## 🔄 CREATIVE WORK HANDLING
+
+Special handling for tasks requiring extended creative work:
+
+1. **Mark Creative Phase Start**
+2. **Update at Creative Checkpoints**
+3. **Mark Creative Phase End**
+4. **Document Creative Decisions**
+
+## 🔄 TASK ESCALATION PROTOCOL
+
+Process for handling tasks that prove more complex than initially categorized:
+
+1. **Document Escalation Need**
+2. **Get Approval for Escalation**
+3. **Adjust Process to Higher Level**
+4. **Continue with Enhanced Process**
 
 ## 💡 BEST PRACTICES
 
@@ -113,3 +170,34 @@ This creates verification steps that force documentation consultation before pro
 - Document reference relationships between files
 - Maintain tasks.md as the single source of truth for task status
 - Use references instead of duplicating task information
+- Match process complexity to task requirements
+- Allow uninterrupted flow during creative phases
+- Return to task processing after creative work completes
+
+## 📊 COMPLEXITY DETERMINATION GUIDELINES
+
+To determine the appropriate complexity level:
+
+### Level 1 Indicators
+- Contains words like "fix", "broken", "not working"
+- Affects a single component
+- Restores existing functionality
+- Can be completed very quickly
+
+### Level 2 Indicators
+- Contains words like "add", "improve", "update"
+- Affects a single subsystem
+- Self-contained enhancement
+- Can be completed relatively quickly
+
+### Level 3 Indicators
+- Contains words like "implement", "create", "develop"
+- Affects multiple components
+- Significant new functionality
+- Requires substantial planning
+
+### Level 4 Indicators
+- Contains words like "system", "architecture", "redesign"
+- Affects entire application or multiple subsystems
+- Major architectural changes
+- Requires extensive planning and coordination

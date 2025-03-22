@@ -1,11 +1,11 @@
 ---
-description: Master control file for Memory Bank System
+description: Master control file for Adaptive Memory Bank System
 globs: 
 alwaysApply: true
 ---
-# 🔍 CURSOR'S MEMORY-BASED ASSISTANT SYSTEM
+# 🔍 ADAPTIVE MEMORY-BASED ASSISTANT SYSTEM
 
-> **TL;DR:** I am an AI with memory that resets between sessions. I use a structured Memory Bank to maintain context. For any task, I must (1) check for critical files, (2) follow the 6-step workflow, (3) execute commands one at a time, (4) consult reference files, and (5) update documentation in real-time.
+> **TL;DR:** I am an AI with memory that resets between sessions. I use a structured Memory Bank to maintain context. The system scales across four complexity levels from quick bug fixes to complex systems, adapting the process to match task requirements while maintaining essential documentation.
 
 ## 🚨 PLATFORM IDENTIFICATION - FIRST STEP
 
@@ -27,22 +27,39 @@ docs/archive: [Directory exists/Directory missing]
 tasks.md: [File exists/File missing]
 
 Creating any missing files (NOT directories):
-
-```bash
-### Preferred Tool-Based Commands
-
-Use these built-in tools instead of direct terminal commands:
-- `list_dir` tool - For listing directory contents (instead of dir/ls)
-- `edit_file` tool - For creating/editing files (instead of echo/touch)
-- Use relative paths directly with tools (instead of cd commands)
-- `run_terminal_cmd` - When terminal commands are necessary, execute ONE at a time
-
 ```
-```
+
+## 🚨 ADAPTIVE COMPLEXITY LEVELS
+
+Match process complexity to task requirements:
+
+1. **Level 1: Quick Bug Fix**
+   - Simple errors, UI glitches, minor issues
+   - Streamlined process with targeted documentation
+   - 2-3 task updates (start/fix/end)
+   - Focus: Fix the specific issue
+
+2. **Level 2: Simple Enhancement**
+   - Small features, minor improvements
+   - Basic process with essential documentation
+   - 4-6 task updates at key milestones
+   - Focus: Clean implementation with clear documentation
+
+3. **Level 3: Intermediate Feature**
+   - Complete features, significant changes
+   - Standard process with full section tracking
+   - 8-12 task updates at defined points
+   - Focus: Comprehensive planning and documentation
+
+4. **Level 4: Complex System**
+   - Major systems, architectural changes
+   - Full formal process with detailed checkpoints
+   - 15+ task updates with formal verification
+   - Focus: Architectural integrity and complete documentation
 
 ## 🚨 MISSION-CRITICAL ESSENTIALS
 
-1. **Memory Bank Files** - Create/update these first:
+1. **Memory Bank Files** - Create/update based on task complexity:
    - `projectbrief.md` - Core requirements
    - `productContext.md` - Project purpose
    - `activeContext.md` - Current focus
@@ -51,86 +68,156 @@ Use these built-in tools instead of direct terminal commands:
    - `progress.md` - Status & reflections
    - `tasks.md` - SINGLE SOURCE OF TRUTH for all task tracking
 
-2. **Required Workflow** - Follow these steps in order:
+2. **Required Workflow** - Scales by complexity level:
    ```
-   1️⃣ INITIALIZATION
-   2️⃣ DOCUMENTATION SETUP
-   3️⃣ TASK PLANNING
-   4️⃣ IMPLEMENTATION
-   5️⃣ REFLECTION
-   6️⃣ ARCHIVING
+   Level 1: INITIALIZATION → IMPLEMENTATION → DOCUMENTATION
+   
+   Level 2: INITIALIZATION → DOCUMENTATION SETUP → PLANNING → 
+           IMPLEMENTATION → REFLECTION → SIMPLE ARCHIVING
+   
+   Level 3-4: INITIALIZATION → DOCUMENTATION SETUP → TASK PLANNING → 
+             IMPLEMENTATION → REFLECTION → ARCHIVING
    ```
 
 3. **Command Safety** - Execute commands ONE AT A TIME with platform awareness
-4. **Reference Consulting** - Explicitly check reference files with standardized format
-5. **Real-Time Updates** - Update implementation details in activeContext.md
+4. **Reference Consulting** - Scale depth based on task complexity
+5. **Real-Time Updates** - Update documentation at frequency appropriate to level
 
 ## ⚡ QUICK REFERENCES
 
 | Critical Process | Reference Link | When to Consult |
 |------------------|----------------|-----------------|
-| Memory Structure | [memory-bank.mdc](mdc:.cursor/rules/Core%20Implementation/memory-bank.mdc) | Before updating any docs |
-| Workflow Process | [workflow.mdc](mdc:.cursor/rules/Core%20Implementation/workflow.mdc) | When starting a task |
-| Command Safety  | [command-execution.mdc](mdc:.cursor/rules/Core%20Implementation/command-execution.mdc) | Before running commands |
-| Task Archiving | [archive.mdc](mdc:.cursor/rules/Core%20Implementation/archive.mdc) | When completing a task |
-| Verification | [verification-checklist-simplified.mdc](mdc:.cursor/rules/Core%20Implementation/verification-checklist-simplified.mdc) | Before finishing any task |
-| Task Tracking | [simplified-task-tracking.mdc](mdc:.cursor/rules/Core%20Implementation/simplified-task-tracking.mdc) | When updating task status |
-| Reference Triggers | [reference-triggers.mdc](mdc:.cursor/rules/Core%20Implementation/reference-triggers.mdc) | When consulting examples |
-| Section Checkpoints | [section-checkpoint-system.mdc](mdc:.cursor/rules/Core%20Implementation/section-checkpoint-system.mdc) | At the end of each section |
-| Platform Awareness | [platform-awareness.mdc](mdc:.cursor/rules/Core%20Implementation/platform-awareness.mdc) | When executing commands |
-| Context Optimization | [context-minimal-mode.mdc](mdc:.cursor/rules/Core%20Implementation/context-minimal-mode.mdc) | When context space is limited |
+| Adaptive Workflow | [workflow.mdc](mdc:.cursor/rules/Core%20Implementation/workflow.mdc) | Start of any task |
+| Task Tracking | [task-tracking.mdc](mdc:.cursor/rules/Core%20Implementation/task-tracking.mdc) | When updating task status |
+| Memory Structure | [memory-bank.mdc](mdc:.cursor/rules/Core%20Implementation/memory-bank.mdc) | Before updating docs |
+| Command Safety | [command-execution.mdc](mdc:.cursor/rules/Core%20Implementation/command-execution.mdc) | Before running commands |
+| VAN Protocol | [van-protocol.mdc](mdc:.cursor/rules/Core%20Implementation/van-protocol.mdc) | When processing VAN command |
+| Complex Tasks | [verification-checklist.mdc](mdc:.cursor/rules/Core%20Implementation/verification-checklist.mdc) | For Level 3-4 tasks |
 
-## 📝 IMPLEMENTATION WORKFLOW
+## 📝 LEVEL 1: QUICK BUG FIX WORKFLOW
+
+1. **STREAMLINED INITIALIZATION**
+   - Review directly relevant Memory Bank files
+   - State bug description and objective
+   - Identify platform (Windows/Mac/Linux)
+   ✓ Checkpoint: Is the issue clearly defined?
+
+2. **RAPID IMPLEMENTATION**
+   - Identify root cause through targeted investigation
+   - Execute commands one at a time
+   - Implement fix with minimal changes
+   - Verify the fix resolves the issue
+   ✓ Checkpoint: Does the fix work?
+
+3. **QUICK DOCUMENTATION**
+   - Document the issue and solution
+   - Update tasks.md with completion status
+   - Add brief implementation note to activeContext.md
+   ✓ Checkpoint: Is the solution documented?
+
+## 📝 LEVEL 2: SIMPLE ENHANCEMENT WORKFLOW
+
+1. **BASIC INITIALIZATION**
+   - Review relevant Memory Bank files
+   - State enhancement objective
+   - Identify platform
+   ✓ Checkpoint: Is the enhancement clear?
+
+2. **SIMPLE DOCUMENTATION SETUP**
+   - Update relevant Memory Bank files
+   - Create task entry in tasks.md
+   ✓ Checkpoint: Is the plan documented?
+
+3. **BASIC PLANNING**
+   - Create 3-5 step implementation plan
+   - Document in tasks.md with [ ] markers
+   ✓ Checkpoint: Is the plan complete?
+
+4. **STANDARD IMPLEMENTATION**
+   - Execute commands one at a time
+   - Update task status in tasks.md after key steps
+   - Add implementation details to activeContext.md
+   ✓ Checkpoint: Is the enhancement implemented?
+
+5. **BRIEF REFLECTION**
+   - Document what worked and challenges faced
+   - Update Memory Bank with insights
+   ✓ Checkpoint: Are learnings captured?
+
+6. **SIMPLE ARCHIVING**
+   - Mark task as completed in tasks.md
+   - Update activeContext.md with completion
+   ✓ Checkpoint: Is the task properly marked complete?
+
+## 📝 LEVEL 3-4: FULL FORMAL WORKFLOW
 
 1. **INITIALIZATION**
-   - Read Memory Bank files
+   - Read ALL Memory Bank files
    - State task objective
-   - Identify platform (Windows/Mac/Linux)
-   - Create .cursorrules if missing (as a FILE, not directory)
-   - Create tasks.md if missing
-   - Consult workflow-examples.mdc
+   - Identify platform
+   - Create section tracking list
+   - Make verification commitment
    ✓ Checkpoint: Am I clear on what needs to be done?
 
 2. **DOCUMENTATION SETUP**
    - Update relevant Memory Bank files
-   - Update .cursorrules with context (project patterns)
-   - Add initial task entry to tasks.md
-   - Include platform-specific information
+   - Add task entry to tasks.md
    ✓ Checkpoint: Have I documented my plan?
 
 3. **TASK PLANNING**
    - Document goals and steps with [ ] markers in tasks.md
    - Identify potential challenges
    - Include platform considerations
-   - Consult workflow-examples.mdc
    ✓ Checkpoint: Do I have a clear step-by-step plan?
 
 4. **IMPLEMENTATION**
    - Execute commands one at a time
-   - Document each step with platform considerations
-   - Document command failures and alternatives
+   - Document each step
    - Update task status in tasks.md
    - Add implementation details to activeContext.md
-   - Consult command-examples.mdc
    ✓ Checkpoint: Am I following my plan?
 
 5. **REFLECTION**
    - Document what went well/challenges
-   - Include platform-specific learnings
+   - Include four required subsections
    - Update Memory Bank with learnings
-   - Consult reflection-examples.mdc
    ✓ Checkpoint: Have I captured what I learned?
 
 6. **ARCHIVING**
    - Archive in docs/archive/completed_tasks.md
    - Mark task as completed in tasks.md
-   - Update progress.md and activeContext.md with references to task
-   - Consult archive-examples.mdc
+   - Update progress.md and activeContext.md
    ✓ Checkpoint: Is this properly documented for next time?
 
-## 🔄 AFTER EVERY MEMORY RESET
+## 🔄 CREATIVE WORK HANDLING
 
-I begin completely fresh. The Memory Bank and .cursorrules are my only links to previous work. Reading them thoroughly is not optional - it's the foundation of my effectiveness.
+For tasks requiring extended creative work:
+
+1. **Mark Creative Phase Start:**
+```
+======== ENTERING CREATIVE PHASE ========
+Focus: [UI design/Algorithm development/Architecture planning]
+```
+
+2. **Update at Creative Checkpoints:**
+```
+🔄 CREATIVE CHECKPOINT: [Milestone reached]
+- Key decisions made:
+  - [Decision 1]
+  - [Decision 2]
+- Next creative milestone: [Description]
+```
+
+3. **Mark Creative Phase End:**
+```
+======== EXITING CREATIVE PHASE - UPDATING TASKS ========
+
+🔄 TASK UPDATE: [Task name] - [Status]
+- Updated in tasks.md ✓
+- Creative work completed:
+  - [Summary of creative output]
+- Implementation details added to activeContext.md ✓
+```
 
 ## 📚 STREAMLINED REFERENCE FORMAT
 
@@ -147,7 +234,7 @@ Key points:
 
 ## 🔄 TASK AND IMPLEMENTATION UPDATES
 
-During implementation, after each significant step:
+During implementation, after each significant step (frequency varies by level):
 
 ```
 🔄 TASK UPDATE: [Task/Subtask] - [X] Complete/[ ] Pending
@@ -156,12 +243,6 @@ During implementation, after each significant step:
 🔄 IMPLEMENTATION UPDATE:
 - Added to activeContext.md: [Brief implementation details]
 ```
-### Preferred Tool-Based Commands
-Use these built-in tools instead of direct terminal commands:
-- `list_dir` tool - For listing directory contents (instead of dir/ls)
-- `edit_file` tool - For creating/editing files (instead of echo/touch)
-- Use relative paths directly with tools (instead of cd commands)
-- `run_terminal_cmd` - When terminal commands are necessary, execute ONE at a time
 
 ## 💻 PLATFORM-SPECIFIC COMMANDS (Use only when tools aren't available)
 
@@ -189,3 +270,21 @@ NEVER use command chaining like:
 - `command1; command2`
 
 ALWAYS execute ONE command at a time!
+
+## 🔄 AFTER EVERY MEMORY RESET
+
+I begin completely fresh. The Memory Bank and .cursorrules are my only links to previous work. Reading them thoroughly is not optional - it's the foundation of my effectiveness.
+
+## 🔄 TASK ESCALATION PROTOCOL
+
+If a task proves more complex than initially categorized:
+
+1. Document the escalation need:
+```
+⚠️ TASK ESCALATION NEEDED
+Current Level: [Level X]
+Recommended Level: [Level Y]
+Reason: [Brief explanation]
+```
+
+2. If escalation is approved, adjust the process to the higher level.

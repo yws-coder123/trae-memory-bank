@@ -23,12 +23,13 @@ The Cursor Memory Bank System creates a **structured external memory** for your 
 - **Automatically Maintained**: The system updates its own memory
 - **Procedurally Verified**: Built-in checkpoints ensure completeness
 - **Platform-Aware**: Adapts to your operating system automatically
+- **Adaptive Complexity**: Scales process based on task complexity
 
 ![Memory Bank System](./images/memory-bank-diagram.png)
 
 ## How It Works: Strategic Context Management
 
-The Memory Bank System solves the context limitations of LLMs through three key innovations:
+The Memory Bank System solves the context limitations of LLMs through these key innovations:
 
 ### 1. Structured Documentation as Memory
 
@@ -42,7 +43,7 @@ memory-bank/
 ├── systemPatterns.md    # How we've designed it
 ├── techContext.md       # What technologies we're using
 ├── progress.md          # What we've completed
-└── tasks.md             # What we're tracking
+└── tasks.md             # What we're tracking (single source of truth)
 ```
 
 ### 2. Rule-Based Context Loading
@@ -55,16 +56,16 @@ We leverage Cursor's rules system to selectively load only the most relevant con
 
 This strategic loading prevents context window overflow while ensuring the AI has access to all knowledge.
 
-### 3. Consistent Workflow Enforcement
+### 3. Adaptive Workflow Enforcement
 
-The system enforces a consistent 6-step workflow for every task, with built-in verification at each stage:
+The system scales its workflow process based on task complexity:
 
-1. **INITIALIZATION** - Establish context and project understanding
-2. **DOCUMENTATION SETUP** - Update memory with new requirements
-3. **TASK PLANNING** - Create a structured plan with checkpoints
-4. **IMPLEMENTATION** - Execute with continuous documentation
-5. **REFLECTION** - Capture learnings systematically
-6. **ARCHIVING** - Store completed work for future reference
+- **Level 1: Quick Bug Fix** - Streamlined process for simple errors and minor issues
+- **Level 2: Simple Enhancement** - Basic process for small features and improvements
+- **Level 3: Intermediate Feature** - Standard process for complete features
+- **Level 4: Complex System** - Comprehensive process for major architectural changes
+
+Each level provides appropriate documentation rigor and process structure to match the task requirements.
 
 ## The Benefits: A Truly Persistent AI Partner
 
@@ -72,7 +73,7 @@ By implementing the Memory Bank System, you gain:
 
 - **Session Persistence**: Your AI retains critical context between sessions
 - **Self-Documenting Projects**: Documentation automatically stays up to date
-- **Workflow Consistency**: Every task follows the same proven process
+- **Workflow Efficiency**: Process scales to match task complexity
 - **Platform Adaptability**: Commands automatically adapt to your OS
 - **Reduced Cognitive Load**: Stop repeating yourself and focus on building
 
@@ -151,7 +152,7 @@ Setting up the Memory Bank System takes just minutes:
 # Clone the Memory Bank System
 git clone https://github.com/yourusername/cursor-memory-bank.git
 
-# Follow the setup instructions in INSTALLATION.md
+# Follow the setup instructions in docs/INSTALLATION.md
 ```
 
 ## Frequently Asked Questions
@@ -167,6 +168,13 @@ A: Setup takes less than 5 minutes with our simple initialization process.
 
 **Q: Does this slow down my workflow?**  
 A: The opposite! After initial setup, you'll save time by not having to repeatedly explain your project.
+
+## Detailed Documentation
+
+For more detailed information about the Memory Bank System:
+
+- [Complete Architecture](./docs/architecture.md) - Comprehensive technical details
+- [Optimization Journey](./docs/optimization-journey.md) - How the system evolved through 6 iterations
 
 ## Join the Memory Revolution
 
@@ -188,6 +196,7 @@ The following sections provide detailed technical information for implementing a
 4. **Single Source of Truth**: tasks.md as the authoritative source for task status tracking
 5. **Platform Awareness**: Commands adapted for specific operating systems
 6. **Real-Time Documentation**: Implementation details continuously added to activeContext.md
+7. **Adaptive Complexity**: Process scales based on task requirements from simple bug fixes to complex systems
 
 ## 🚀 Implementation Guide
 
@@ -310,33 +319,49 @@ alwaysApply: false
    - Always update task status only in tasks.md
    - Refer to this file for all task tracking needs
 
+7. **Match Process to Complexity**
+   - Use the appropriate workflow level for each task
+   - Scale documentation rigor based on task requirements
+
 ## 🚧 Common Implementation Challenges
 
-1. **Missing Section Headers**
-   - Problem: Not using all six mandatory section headers in exact order
-   - Solution: Always include all section headers in the specified sequence
-
-2. **Incorrect Task Status Tracking**
-   - Problem: Updating task status in multiple files or wrong file
-   - Solution: Update status only in tasks.md (Single Source of Truth)
-
-3. **Skipped Verification**
-   - Problem: Not running the verification checklist before completing tasks
-   - Solution: Always complete all checkpoint verifications
-
-4. **Template Text Remnants**
-   - Problem: Leaving placeholder text in archive files
-   - Solution: Remove all template text during implementation
-
-5. **Command Chaining**
-   - Problem: Executing multiple commands at once
-   - Solution: Execute one command at a time, document each result
-
-6. **.cursorrules as Directory**
-   - Problem: Creating .cursorrules as a directory instead of a file
-   - Solution: Ensure .cursorrules is created as a file, not a directory
+1. **Missing Section Headers**: Always use all six mandatory section headers in exact order
+2. **Incorrect Task Status Tracking**: Update task status only in tasks.md (Single Source of Truth)
+3. **Skipped Verification**: Always run the verification checklist before completing any task
+4. **Template Text Remnants**: Always remove template/placeholder text in archive files
+5. **Command Chaining**: Always execute commands one at a time, never chained
+6. **.cursorrules as Directory**: Creating .cursorrules as a directory instead of a file
 
 ## 🧩 Advanced Features
+
+### Adaptive Complexity Levels
+```
+The system scales across four complexity levels:
+
+1. **Level 1: Quick Bug Fix**
+   - Simple errors, UI glitches, minor issues
+   - Streamlined process with targeted documentation
+   - 2-3 task updates (start/fix/end)
+   - Focus: Fix the specific issue
+
+2. **Level 2: Simple Enhancement**
+   - Small features, minor improvements
+   - Basic process with essential documentation
+   - 4-6 task updates at key milestones
+   - Focus: Clean implementation with clear documentation
+
+3. **Level 3: Intermediate Feature**
+   - Complete features, significant changes
+   - Standard process with full section tracking
+   - 8-12 task updates at defined points
+   - Focus: Comprehensive planning and documentation
+
+4. **Level 4: Complex System**
+   - Major systems, architectural changes
+   - Full formal process with detailed checkpoints
+   - 15+ task updates with formal verification
+   - Focus: Architectural integrity and complete documentation
+```
 
 ### Enhanced Verification System
 ```
@@ -372,6 +397,13 @@ Key insights:
 
 🔄 IMPLEMENTATION UPDATE:
 - Added to activeContext.md: [Brief implementation details]
+```
+
+### Creative Phase Handling
+```
+======== ENTERING CREATIVE PHASE ========
+
+======== EXITING CREATIVE PHASE - UPDATING TASKS ========
 ```
 
 ### Platform-Specific Command Adaptations
@@ -438,4 +470,4 @@ If you encounter issues implementing the Memory Bank System, please:
 
 ## 🙏 Acknowledgments
 
-This architecture is designed to optimize AI assistant capabilities within the Cursor IDE, creating a truly persistent development partner that can adapt to any operating system and maintain clear documentation through a structured workflow. 
+This architecture is designed to optimize AI assistant capabilities within the Cursor IDE, creating a truly persistent development partner that can adapt to any operating system and maintain clear documentation through a structured workflow that scales with task complexity. 
