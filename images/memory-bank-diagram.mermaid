@@ -7,7 +7,7 @@ flowchart TD
     classDef section fill:#fff2cc,stroke:#d6b656,stroke-width:1px,rounded:true
     
     %% Initial Setup section
-    subgraph Setup ["1. INITIAL SETUP"]
+    subgraph Setup ["INITIAL SETUP"]
         direction LR
         start([Start]) --> checkFiles{File<br>Check}
         checkFiles -->|Missing| createFiles[Create Files]
@@ -16,7 +16,7 @@ flowchart TD
     end
     
     %% Planning section
-    subgraph Planning ["2. PLANNING PHASE"]
+    subgraph Planning ["PLANNING PHASE"]
         direction LR
         init[INITIALIZATION] --> checkMB{Review<br>Memory Bank}
         checkMB --> docSetup[DOC SETUP]
@@ -26,7 +26,7 @@ flowchart TD
     end
     
     %% Implementation section
-    subgraph Implementation ["3. IMPLEMENTATION"]
+    subgraph Implementation ["IMPLEMENTATION"]
         direction LR
         impl[IMPLEMENTATION] --> execCmd[Execute<br>Commands]
         execCmd -->|One at a Time| updateTask[Update<br>tasks.md]
@@ -36,7 +36,7 @@ flowchart TD
     end
     
     %% Reflection and Archiving
-    subgraph Completion ["4. COMPLETION"]
+    subgraph Completion ["COMPLETION"]
         direction LR
         reflect[REFLECTION] --> reflect4[Document<br>4 Sections]
         reflect4 --> archive[ARCHIVING]
@@ -45,7 +45,7 @@ flowchart TD
     end
     
     %% Verification System section
-    subgraph Verification ["5. VERIFICATION"]
+    subgraph Verification ["VERIFICATION"]
         direction LR
         verify[Verify] --> checkAll{All Checks<br>Pass?}
         checkAll -->|No| fixIssues[Fix Issues]
