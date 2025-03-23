@@ -90,9 +90,40 @@ Breaking down the problem:
 - Verification: [Confirmation that solution meets requirements and constraints]
 ```
 
+## 🎨 CREATIVE PHASE TRANSITIONS
+
+Creative phases can be initiated during any workflow stage when complex problem-solving is needed:
+
+### When to Enter a Creative Phase
+
+Enter a creative phase when you encounter:
+- Multiple viable approaches with significant trade-offs
+- Complex design decisions requiring systematic analysis
+- Problems with competing constraints needing careful balance
+- Architecture or algorithm planning affecting multiple components
+
+### How to Transition Into a Creative Phase
+
+1. Pause regular task processing
+2. Confirm the need for structured thinking
+3. Select appropriate creative phase type (Algorithm/UI/Architecture)
+4. Declare phase start with entry marker
+5. Switch to systematic analysis mode
+
+### How to Transition Out of a Creative Phase
+
+1. Verify thorough analysis completion
+2. Perform creative phase verification checklist
+3. Create comprehensive summary with verification
+4. Mark phase end with exit marker
+5. Update task tracking in tasks.md
+6. Resume normal workflow processing
+
+See [creative-phase-triggers.mdc](mdc:.cursor/rules/Core%20Implementation/creative-phase-triggers.mdc) for detailed guidance on when and how to enter creative phases.
+
 ### Level-Specific Creative Phase Handling
 
-#### Level 1: Quick Bug Fix
+#### Level a: Quick Bug Fix
 For simple bugs that need minimal creative thinking:
 ```
 // Simple creative exploration
@@ -240,6 +271,7 @@ Key points:
 - Review/create .cursorrules file
 - Complete the reference check
 - Make verification commitment
+- **Identify components requiring creative phases**
 
 ### 2️⃣ COMPLETE DOCUMENTATION SETUP
 - Update all relevant Memory Bank files:
@@ -248,17 +280,21 @@ Key points:
   * activeContext.md - Implementation plan
   * progress.md - Milestones/challenges
   * tasks.md - Create task breakdown
+- **Include creative phase placeholders in task breakdown**
 
 ### 3️⃣ COMPREHENSIVE PLANNING
 - Document detailed goals and success criteria
 - Identify all required resources/tools
 - Create comprehensive step-by-step plan
+- **Mark tasks requiring creative phases**
 - Document testing/validation approach
 - Complete the reference check
+- **Complete initial creative phases for architecture/design decisions**
 
 ### 4️⃣ DETAILED IMPLEMENTATION
 - Document each step in detail
 - Execute commands one at a time
+- **Enter creative phases before implementing complex components**
 - Document results (success or failure)
 - Update task status in tasks.md
 - Add implementation details to activeContext.md
@@ -287,6 +323,7 @@ Key points:
 - Review/create .cursorrules file with detailed patterns
 - Complete all reference checks
 - Make detailed verification commitment
+- **Identify architectural elements requiring creative phases**
 
 ### 2️⃣ EXTENSIVE DOCUMENTATION SETUP
 - Update all Memory Bank files with comprehensive details:
@@ -296,10 +333,12 @@ Key points:
   * progress.md - Comprehensive milestones and dependencies
   * tasks.md - Create hierarchical task breakdown
   * .cursorrules - Add system-specific patterns
+- **Include creative phase placeholders for all major design decisions**
 
 ### 3️⃣ ARCHITECTURAL PLANNING
 - Document detailed goals with measurable success criteria
 - Identify all required resources, tools, and dependencies
+- **Conduct creative phases for all major architectural components**
 - Create hierarchical step-by-step plan with dependencies
 - Document comprehensive testing strategy
 - Identify potential architectural risks

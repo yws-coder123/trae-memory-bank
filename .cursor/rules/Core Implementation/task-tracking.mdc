@@ -108,12 +108,14 @@ Tasks.md is the ONLY file that should contain task status tracking:
 - Hierarchical subtask organization
 - Detailed implementation steps
 - Cross-references to documentation
+- **Creative phases marked for all complex design elements**
 
 **Example Task Entry:**
 ```markdown
 ## Current Tasks
 - [ ] Implement user profile management
   - [ ] Data model and schema
+    - [ ] 🎨 CREATIVE PHASE: Design user profile data model
     - [ ] Define user profile fields
     - [ ] Create database schema
     - [ ] Set up validation rules
@@ -122,6 +124,7 @@ Tasks.md is the ONLY file that should contain task status tracking:
     - [ ] Implement security controls
     - [ ] Add error handling
   - [ ] Frontend implementation
+    - [ ] 🎨 CREATIVE PHASE: Design profile component architecture
     - [ ] Create profile form components
     - [ ] Implement image upload
     - [ ] Add validation
@@ -161,16 +164,19 @@ Tasks.md is the ONLY file that should contain task status tracking:
 - Architectural considerations for each component
 - Multiple testing stages
 - Performance and security considerations
+- **Creative phases required for all major architectural elements**
 
 **Example Task Entry:**
 ```markdown
 ## Current Tasks
 - [ ] Implement OAuth2 authentication system
   - [ ] Architecture and design
+    - [ ] 🎨 CREATIVE PHASE: Authentication system architecture
     - [ ] Auth flow design
     - [ ] Provider integration plan
     - [ ] Security review
   - [ ] Core infrastructure
+    - [ ] 🎨 CREATIVE PHASE: Token management strategy
     - [ ] Token management
     - [ ] Session handling
     - [ ] Encryption setup
@@ -179,6 +185,7 @@ Tasks.md is the ONLY file that should contain task status tracking:
     - [ ] Facebook OAuth
     - [ ] Twitter OAuth
   - [ ] Frontend integration
+    - [ ] 🎨 CREATIVE PHASE: Auth component architecture
     - [ ] Auth components
     - [ ] Protected routes
     - [ ] User experience flow

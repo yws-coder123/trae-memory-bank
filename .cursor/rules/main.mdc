@@ -94,6 +94,7 @@ Match process complexity to task requirements:
 | VAN Protocol | [van-protocol.mdc](mdc:.cursor/rules/Core%20Implementation/van-protocol.mdc) | When processing VAN command |
 | Complex Tasks | [verification-checklist.mdc](mdc:.cursor/rules/Core%20Implementation/verification-checklist.mdc) | For Level 3-4 tasks |
 | Creative Phases | [creative-phase-guidelines.mdc](mdc:.cursor/rules/Core%20Implementation/creative-phase-guidelines.mdc) | For creative work |
+| Creative Triggers | [creative-phase-triggers.mdc](mdc:.cursor/rules/Core%20Implementation/creative-phase-triggers.mdc) | When to enter creative phases |
 
 ## 📝 LEVEL 1: QUICK BUG FIX WORKFLOW
 
@@ -169,14 +170,17 @@ Match process complexity to task requirements:
    - Document goals and steps with [ ] markers in tasks.md
    - Identify potential challenges
    - Include platform considerations
-   ✓ Checkpoint: Do I have a clear step-by-step plan?
+   - **Identify components requiring creative phases (mandatory for Level 3-4)**
+   - **Mark tasks requiring creative phases in tasks.md**
+   ✓ Checkpoint: Do I have a clear step-by-step plan with creative phases identified?
 
 4. **IMPLEMENTATION**
    - Execute commands one at a time
    - Document each step
+   - **Enter creative phases before implementing complex components**
    - Update task status in tasks.md
    - Add implementation details to activeContext.md
-   ✓ Checkpoint: Am I following my plan?
+   ✓ Checkpoint: Am I following my plan with appropriate creative phases?
 
 5. **REFLECTION**
    - Document what went well/challenges
@@ -192,7 +196,17 @@ Match process complexity to task requirements:
 
 ## 🎨 CREATIVE WORK HANDLING
 
-For tasks requiring extended creative work, use creative phases as dedicated thinking spaces:
+For tasks requiring complex problem-solving, use creative phases as dedicated thinking spaces:
+
+### When to Enter a Creative Phase
+Enter a creative phase whenever you encounter:
+- Multiple viable approaches with significant trade-offs
+- Complex design decisions requiring systematic analysis  
+- Problems with competing constraints needing careful balance
+- Tasks requiring exploration of multiple options
+- Architecture or algorithm planning affecting multiple components
+
+### How to Structure a Creative Phase
 
 1. **Mark Creative Phase Start:**
 ```

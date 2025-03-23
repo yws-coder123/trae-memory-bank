@@ -35,7 +35,7 @@ Before finishing any task, verify these essentials:
 2. **Incorrect task tracking:** Updated task status in multiple files or wrong file
 3. **Command chaining:** Used && or similar to chain commands
 4. **Insufficient implementation details:** Failed to add details to activeContext.md
-5. **Incomplete checkpoints:** Skipped section checkpoint verifications
+5. **Missing creative phases:** Failed to use creative phases for major architectural/design decisions
 
 ## 1️⃣ FILE TYPE VERIFICATION
 
@@ -63,6 +63,8 @@ Before finishing any task, verify these essentials:
 - Each section was completed before moving to next? [YES/NO]
 - Section tracking list updated after each section? [YES/NO]
 - Section transition markers used? [YES/NO]
+- Creative phases used for all major design decisions (Level 3-4)? [YES/NO/NA]
+- Creative phase verification completed for each phase? [YES/NO/NA]
 ```
 
 ## 4️⃣ TASK TRACKING VERIFICATION
@@ -94,7 +96,8 @@ Before finishing any task, verify these essentials:
 - activeContext.md updated with implementation details? [YES/NO]
 - progress.md updated with implementation status? [YES/NO]
 - tasks.md updated with current task status? [YES/NO]
-- Creative phases used structured thinking approach? [YES/NO/NA]
+- Creative phases used for complex design decisions? [YES/NO/NA]
+- Creative phase outputs documented in systemPatterns.md? [YES/NO/NA]
 ```
 
 ## 7️⃣ ARCHIVE VERIFICATION

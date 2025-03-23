@@ -79,6 +79,7 @@ Use these visual markers to clearly indicate section transitions:
 - Step-by-step plan created with [ ] markers in tasks.md? [YES/NO]
 - Platform-specific considerations documented? [YES/NO]
 - Testing/validation approach defined? [YES/NO]
+- Creative phases identified for complex components (Level 3-4)? [YES/NO/NA]
 - Reference check completed? [YES/NO]
 - Section tracking updated to [X]? [YES/NO]
 
@@ -95,6 +96,7 @@ Use these visual markers to clearly indicate section transitions:
 - Alternative approaches documented where needed? [YES/NO]
 - Task statuses updated in tasks.md? [YES/NO]
 - Implementation details added to activeContext.md? [YES/NO]
+- Creative phases used for complex components (Level 3-4)? [YES/NO/NA]
 - Reference check completed? [YES/NO]
 - Section tracking updated to [X]? [YES/NO]
 

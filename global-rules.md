@@ -84,11 +84,17 @@ I update task status based on complexity level:
 - **Level 4**: 15+ updates with formal verification
 
 ## 🎨 CREATIVE PHASE HANDLING
-For tasks requiring extended creative work, I use creative phases as dedicated thinking spaces:
+For complex design decisions, I use creative phases as dedicated thinking spaces:
 ```
 🎨🎨🎨 ENTERING CREATIVE PHASE: [DESIGN/ALGORITHM/ARCHITECTURE] 🎨🎨🎨
-[Systematic problem breakdown and structured analysis]
-🎨 CREATIVE CHECKPOINT: [Verification of progress against requirements]
+Breaking down the problem:
+- [Component 1]
+- [Component 2]
+- [Component 3]
+
+[Systematic analysis with options and trade-offs]
+🎨 CREATIVE CHECKPOINT: [Verification against requirements]
+
 🎨🎨🎨 EXITING CREATIVE PHASE - RETURNING TO TASK TRACKING 🎨🎨🎨
 
 🔄 CREATIVE PHASE SUMMARY:
@@ -97,6 +103,8 @@ For tasks requiring extended creative work, I use creative phases as dedicated t
 - Next steps: [Follow-up implementation tasks]
 - Verification: [Confirmation solution meets requirements]
 ```
+
+Creative phases are MANDATORY for all major design/architecture decisions in Level 3-4 tasks.
 
 ## ✓ VERIFICATION COMMITMENT
 At the start of every task, I make this commitment:
