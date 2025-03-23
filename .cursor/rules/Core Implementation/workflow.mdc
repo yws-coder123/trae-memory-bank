@@ -49,15 +49,80 @@ These visual markers indicate workflow section transitions (Level 3-4 only):
 ======== ARCHIVING COMPLETE ⟹ TASK FINISHED ========
 ```
 
-## 🚨 CREATIVE PHASE MARKERS
+## 🎨 CREATIVE PHASE MARKERS
 
-For tasks requiring extended creative work:
+For tasks requiring extended creative work, use these prominent markers to create a dedicated thinking space:
 
 ```
-======== ENTERING CREATIVE PHASE ========
+🎨🎨🎨 ENTERING CREATIVE PHASE: [DESIGN/ALGORITHM/ARCHITECTURE] 🎨🎨🎨
+Focus: [Specific focus area]
+Objective: [What you aim to accomplish]
+Constraints: [Any constraints to consider]
 
-======== EXITING CREATIVE PHASE - UPDATING TASKS ========
+Breaking down the problem:
+- [Component 1]
+- [Component 2]
+- [Component 3]
+
+[Structured creative exploration with systematic analysis]
+
+🎨 CREATIVE CHECKPOINT: [Milestone reached]
+- Progress: [Brief progress description]
+- Decisions made:
+  - [Decision 1]
+  - [Decision 2]
+- Verification:
+  - [Verify solution addresses requirements]
+  - [Verify compliance with constraints]
+  - [Verify consistency with existing system]
+- Open questions:
+  - [Question 1]
+  - [Question 2]
+- Next creative milestone: [Description]
+
+🎨🎨🎨 EXITING CREATIVE PHASE - RETURNING TO TASK TRACKING 🎨🎨🎨
+
+🔄 CREATIVE PHASE SUMMARY:
+- Completed: [Brief description of creative work]
+- Key decisions: [Important decisions made]
+- Next steps: [Follow-up implementation tasks]
+- Documentation: [Where decisions were documented]
+- Verification: [Confirmation that solution meets requirements and constraints]
 ```
+
+### Level-Specific Creative Phase Handling
+
+#### Level 1: Quick Bug Fix
+For simple bugs that need minimal creative thinking:
+```
+// Simple creative exploration
+[Brief creative exploration for bug solution]
+// End creative exploration
+
+🔄 TASK UPDATE: [Bug fix] - [Status]
+- Solution determined: [Brief description]
+- Updated in tasks.md ✓
+```
+
+#### Level 2: Simple Enhancement
+For simple enhancements requiring basic creative work:
+```
+🎨 ENTERING CREATIVE PHASE: [BRIEF DESCRIPTION]
+[Creative work happens here]
+🎨 EXITING CREATIVE PHASE
+
+🔄 CREATIVE PHASE SUMMARY:
+- Completed: [Brief description]
+- Key decisions: [Key points]
+- Next steps: [Implementation tasks]
+```
+
+#### Level 3-4: Intermediate/Complex
+For more complex tasks, use the full creative phase structure with checkpoints and detailed documentation.
+
+### Creative Phase Examples
+
+See [creative-phase-examples.mdc](mdc:.cursor/rules/Extended%20Details/creative-phase-examples.mdc) for comprehensive examples of different creative phase types.
 
 ## 📋 LEVEL-SPECIFIC SECTION TRACKING
 

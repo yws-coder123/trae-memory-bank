@@ -93,6 +93,7 @@ Match process complexity to task requirements:
 | Command Safety | [command-execution.mdc](mdc:.cursor/rules/Core%20Implementation/command-execution.mdc) | Before running commands |
 | VAN Protocol | [van-protocol.mdc](mdc:.cursor/rules/Core%20Implementation/van-protocol.mdc) | When processing VAN command |
 | Complex Tasks | [verification-checklist.mdc](mdc:.cursor/rules/Core%20Implementation/verification-checklist.mdc) | For Level 3-4 tasks |
+| Creative Phases | [creative-phase-guidelines.mdc](mdc:.cursor/rules/Core%20Implementation/creative-phase-guidelines.mdc) | For creative work |
 
 ## 📝 LEVEL 1: QUICK BUG FIX WORKFLOW
 
@@ -189,29 +190,54 @@ Match process complexity to task requirements:
    - Update progress.md and activeContext.md
    ✓ Checkpoint: Is this properly documented for next time?
 
-## 🔄 CREATIVE WORK HANDLING
+## 🎨 CREATIVE WORK HANDLING
 
-For tasks requiring extended creative work:
+For tasks requiring extended creative work, use creative phases as dedicated thinking spaces:
 
 1. **Mark Creative Phase Start:**
 ```
-======== ENTERING CREATIVE PHASE ========
-Focus: [UI design/Algorithm development/Architecture planning]
+🎨🎨🎨 ENTERING CREATIVE PHASE: [DESIGN/ALGORITHM/ARCHITECTURE] 🎨🎨🎨
+Focus: [Specific focus area]
+Objective: [What you aim to accomplish]
+Constraints: [Any constraints to consider]
+
+Breaking down the problem:
+- [Component 1]
+- [Component 2]
+- [Component 3]
 ```
 
 2. **Update at Creative Checkpoints:**
 ```
-🔄 CREATIVE CHECKPOINT: [Milestone reached]
-- Key decisions made:
+🎨 CREATIVE CHECKPOINT: [Milestone reached]
+- Progress: [Brief progress description]
+- Decisions made:
   - [Decision 1]
   - [Decision 2]
+- Verification:
+  - [Verify solution addresses requirements]
+  - [Verify compliance with constraints]
+  - [Verify consistency with existing system]
+- Open questions:
+  - [Question 1]
+  - [Question 2]
 - Next creative milestone: [Description]
 ```
 
 3. **Mark Creative Phase End:**
 ```
-======== EXITING CREATIVE PHASE - UPDATING TASKS ========
+🎨🎨🎨 EXITING CREATIVE PHASE - RETURNING TO TASK TRACKING 🎨🎨🎨
 
+🔄 CREATIVE PHASE SUMMARY:
+- Completed: [Brief description of creative work]
+- Key decisions: [Important decisions made]
+- Next steps: [Follow-up implementation tasks]
+- Documentation: [Where decisions were documented]
+- Verification: [Confirmation that solution meets requirements and constraints]
+```
+
+4. **Update Task Status:**
+```
 🔄 TASK UPDATE: [Task name] - [Status]
 - Updated in tasks.md ✓
 - Creative work completed:

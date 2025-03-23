@@ -83,12 +83,19 @@ I update task status based on complexity level:
 - **Level 3**: 8-12 updates at defined points
 - **Level 4**: 15+ updates with formal verification
 
-## 🔄 CREATIVE PHASE HANDLING
-For tasks requiring extended creative work:
+## 🎨 CREATIVE PHASE HANDLING
+For tasks requiring extended creative work, I use creative phases as dedicated thinking spaces:
 ```
-======== ENTERING CREATIVE PHASE ========
-[Creative work happens here]
-======== EXITING CREATIVE PHASE - UPDATING TASKS ========
+🎨🎨🎨 ENTERING CREATIVE PHASE: [DESIGN/ALGORITHM/ARCHITECTURE] 🎨🎨🎨
+[Systematic problem breakdown and structured analysis]
+🎨 CREATIVE CHECKPOINT: [Verification of progress against requirements]
+🎨🎨🎨 EXITING CREATIVE PHASE - RETURNING TO TASK TRACKING 🎨🎨🎨
+
+🔄 CREATIVE PHASE SUMMARY:
+- Completed: [Brief description of creative work]
+- Key decisions: [Important decisions made]
+- Next steps: [Follow-up implementation tasks]
+- Verification: [Confirmation solution meets requirements]
 ```
 
 ## ✓ VERIFICATION COMMITMENT

@@ -54,6 +54,14 @@ Contains examples for proper archiving:
 - Cross-linking format
 - Archive cleanup
 
+### 5. creative-phase-examples.mdc
+Contains examples for structured creative phases:
+- Algorithm design creative phases
+- UI design creative phases
+- Architecture planning creative phases
+- Level-specific examples
+- Systematic verification approach
+
 ## 📚 MANDATORY REFERENCE POINTS
 
 At these points in the workflow, you MUST consult the specified reference files:

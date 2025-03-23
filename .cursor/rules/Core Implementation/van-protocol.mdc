@@ -212,6 +212,71 @@ Before proceeding after VAN:
 - Have I made the verification commitment (for Levels 3-4)?
 - Am I ready to start the workflow?
 
+## 🎨 CREATIVE PHASE HANDLING
+
+For tasks requiring extended creative work:
+
+1. Mark the beginning of a creative phase with prominent visual markers and problem breakdown:
+```
+🎨🎨🎨 ENTERING CREATIVE PHASE: [DESIGN/ALGORITHM/ARCHITECTURE] 🎨🎨🎨
+Focus: [Specific focus area]
+Objective: [What you aim to accomplish]
+Constraints: [Any constraints to consider]
+
+Breaking down the problem:
+- [Component 1]
+- [Component 2]
+- [Component 3]
+```
+
+2. For extended creative work, use periodic checkpoints with verification:
+```
+🎨 CREATIVE CHECKPOINT: [Milestone reached]
+- Progress: [Brief progress description]
+- Decisions made:
+  - [Decision 1]
+  - [Decision 2]
+- Verification:
+  - [Verify solution addresses requirements]
+  - [Verify compliance with constraints]
+  - [Verify consistency with existing system]
+- Open questions:
+  - [Question 1]
+  - [Question 2]
+- Next creative milestone: [Description]
+```
+
+3. After completing the creative phase, use prominent exit markers and verification summary:
+```
+🎨🎨🎨 EXITING CREATIVE PHASE - RETURNING TO TASK TRACKING 🎨🎨🎨
+
+🔄 CREATIVE PHASE SUMMARY:
+- Completed: [Brief description of creative work]
+- Key decisions: [Important decisions made]
+- Next steps: [Follow-up implementation tasks]
+- Documentation: [Where decisions were documented]
+- Verification: [Confirmation that solution meets requirements and constraints]
+```
+
+4. Always update tasks.md after exiting a creative phase:
+```
+🔄 TASK UPDATE: [Task name] - [Status]
+- Updated in tasks.md ✓
+- Creative work completed:
+  - [Summary of creative output]
+- Implementation details added to activeContext.md ✓
+```
+
+### Level-Specific Creative Phase Handling
+
+The complexity of creative phase documentation should match the task complexity level:
+
+- **Level 1 (Bug Fix)**: Simple creative exploration markers if needed
+- **Level 2 (Enhancement)**: Basic creative phase markers with summary
+- **Level 3-4 (Feature/System)**: Full creative phase structure with checkpoints
+
+See [creative-phase-examples.mdc](mdc:.cursor/rules/Extended%20Details/creative-phase-examples.mdc) for detailed examples.
+
 ## 📋 LEVEL ESCALATION
 
 If during the task execution, you discover the task is more complex than initially determined:
@@ -226,24 +291,6 @@ Example escalation notification:
 I've discovered this task involves multiple subsystems and requires significant architectural changes. This is more aligned with a Level 3 Intermediate Feature than a Level 2 Simple Enhancement.
 
 Would you like me to escalate the process to Level 3 for more comprehensive planning and documentation?
-```
-
-## 📋 CREATIVE PHASE HANDLING
-
-For tasks requiring extended creative work:
-
-1. Mark the beginning of a creative phase:
-```
-======== ENTERING CREATIVE PHASE ========
-```
-
-2. After completing the creative phase, return to task processing:
-```
-======== EXITING CREATIVE PHASE - UPDATING TASKS ========
-
-🔄 TASK UPDATE: [Task name] - [Status]
-- Updated in tasks.md ✓
-- [Creative work summary]
 ```
 
 ## 📋 FORCE VERIFICATION OPTION
