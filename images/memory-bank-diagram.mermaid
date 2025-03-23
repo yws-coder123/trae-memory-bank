@@ -49,24 +49,28 @@ flowchart TD
         direction TB
         L3Init[INITIALIZATION] --> L3Doc[DOCUMENTATION SETUP]
         L3Doc --> L3Plan[TASK PLANNING]
-        L3Plan --> L3Impl[IMPLEMENTATION]
+        L3Plan --> L3Creative[CREATIVE PHASES]
+        L3Creative --> L3Impl[IMPLEMENTATION]
         L3Impl --> L3Reflect[REFLECTION]
         L3Reflect --> L3Archive[ARCHIVING]
     end
     
-    %% Creative Phase can occur in Implementation
-    subgraph Creative ["CREATIVE PHASE"]
+    %% Creative Phase format
+    subgraph CreativePhase ["CREATIVE PHASE FORMAT"]
         direction TB
-        creativeStart[Enter Creative Phase] --> creativeWork[Creative Work]
-        creativeWork --> creativeEnd[Exit Creative Phase]
+        creativeStart[Enter Creative Phase] --> problemBreakdown[Problem Breakdown]
+        problemBreakdown --> optionAnalysis[Option Analysis]
+        optionAnalysis --> verification[Verification]
+        verification --> decisionRationale[Decision Rationale]
+        decisionRationale --> creativeEnd[Exit Creative Phase]
         creativeEnd --> creativeUpdate[Update tasks.md]
     end
     
-    %% Implementation section with creative phase option
+    %% Implementation section with optional additional creative phases
     subgraph Implementation ["IMPLEMENTATION (ALL LEVELS)"]
         direction LR
         impl[Execute Commands] -->|One at a Time| updateTask[Update<br>tasks.md]
-        updateTask --> needCreative{Need<br>Creative<br>Work?}
+        updateTask --> needCreative{Need<br>Additional<br>Creative<br>Work?}
         needCreative -->|Yes| enterCreative[Enter<br>Creative<br>Phase]
         needCreative -->|No| continue[Continue<br>Implementation]
         enterCreative -.-> creativeStart
@@ -84,6 +88,14 @@ flowchart TD
         checkAll -->|Yes| complete([Complete])
     end
     
+    %% Creative Phase Gateway (new addition)
+    subgraph Gateway ["CREATIVE PHASE GATEWAY"]
+        direction TB
+        gateway{Creative<br>Phase<br>Gateway}
+        gateway -->|Incomplete| returnToCreative[Return to<br>Creative Phase]
+        gateway -->|Complete| proceedToImpl[Proceed to<br>Implementation]
+    end
+    
     %% References connections on the side
     subgraph References ["REFERENCE REQUIREMENTS"]
         direction TB
@@ -91,6 +103,7 @@ flowchart TD
         ref2[command-examples]
         ref3[reflection-examples]
         ref4[archive-examples]
+        ref5[creative-phase-examples]
     end
     
     %% Connect major workflows
@@ -104,6 +117,11 @@ flowchart TD
     L2Impl -.-> impl
     L3Impl -.-> impl
     
+    %% Connect Creative Phase Gateway
+    L3Creative --> gateway
+    returnToCreative --> L3Creative
+    proceedToImpl --> L3Impl
+    
     %% Connect to verification
     L1Doc --> verify
     L2Archive --> verify
@@ -116,20 +134,21 @@ flowchart TD
     L3Reflect -.-> ref3
     L2Archive -.-> ref4
     L3Archive -.-> ref4
+    L3Creative -.-> ref5
     
     %% Apply styles
     class start,complete process
-    class checkFiles,complexityAssess,needCreative,checkAll decision
+    class checkFiles,complexityAssess,needCreative,checkAll,gateway decision
     class createFiles,platformDetect process
     class L1Init,L1Impl,L1Doc process
     class L2Init,L2Doc,L2Plan,L2Impl,L2Reflect,L2Archive process
-    class L3Init,L3Doc,L3Plan,L3Impl,L3Reflect,L3Archive process
+    class L3Init,L3Doc,L3Plan,L3Creative,L3Impl,L3Reflect,L3Archive process
     class impl,updateTask,enterCreative,continue,nextPhase process
-    class verify,fixIssues process
-    class creativeStart,creativeWork,creativeEnd,creativeUpdate process
+    class verify,fixIssues,returnToCreative,proceedToImpl process
+    class creativeStart,problemBreakdown,optionAnalysis,verification,decisionRationale,creativeEnd,creativeUpdate process
     
-    class Setup,Verification,References,Implementation section
+    class Setup,Verification,References,Implementation,Gateway section
     class Level1 level1
     class Level2 level2
     class Level3_4 level3
-    class Creative creative
+    class CreativePhase creative
