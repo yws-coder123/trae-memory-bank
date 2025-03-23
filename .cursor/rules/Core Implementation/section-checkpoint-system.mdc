@@ -87,6 +87,25 @@ Use these visual markers to clearly indicate section transitions:
 → If any NO: Fix missing items before proceeding
 ```
 
+## ✓ PRE-IMPLEMENTATION CREATIVE PHASE CHECKPOINT
+
+```
+✓ CREATIVE PHASE CHECKPOINT: REQUIRED BEFORE IMPLEMENTATION
+For Level 3-4 tasks, all creative phases MUST be completed before implementation:
+
+- Level 3-4 task confirmed? [YES/NO]
+- Architecture/design decisions identified? [YES/NO]
+- Creative phases completed for ALL identified components? [YES/NO]
+- Each creative phase contains problem breakdown? [YES/NO]
+- Each creative phase includes options with pros/cons? [YES/NO]
+- Each creative phase includes verification against requirements? [YES/NO]
+- Each creative phase has proper entry/exit markers? [YES/NO]
+- Creative phases documented in tasks.md? [YES/NO]
+
+→ If any [NO]: IMPLEMENTATION BLOCKED - Complete creative phases first
+→ If all [YES]: Ready for IMPLEMENTATION
+```
+
 ## ✓ IMPLEMENTATION CHECKPOINT
 
 ```
@@ -148,6 +167,7 @@ Add these reminders at specific points during implementation:
 - Execute ONE command at a time
 - Update task status in tasks.md
 - Add implementation details to activeContext.md
+- Enter creative phases for ANY new design decisions encountered
 ```
 
 ### After every 3 implementation steps:
@@ -168,6 +188,7 @@ For each implementation step, use this mini-checkpoint:
 - Result documented? [YES/NO]
 - Task status updated in tasks.md? [YES/NO]
 - Implementation details added to activeContext.md? [YES/NO]
+- Creative phase used if design decision needed? [YES/NO/NA]
 - Ready for next step? [YES/NO]
 ```
 

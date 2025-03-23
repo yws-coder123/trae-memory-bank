@@ -40,7 +40,9 @@ These visual markers indicate workflow section transitions (Level 3-4 only):
 
 ======== DOCUMENTATION SETUP COMPLETE ⟹ STARTING TASK PLANNING ========
 
-======== TASK PLANNING COMPLETE ⟹ STARTING IMPLEMENTATION ========
+======== TASK PLANNING COMPLETE ⟹ STARTING CREATIVE PHASES ========
+
+======== CREATIVE PHASES COMPLETE ⟹ STARTING IMPLEMENTATION ========
 
 ======== IMPLEMENTATION COMPLETE ⟹ STARTING REFLECTION ========
 
@@ -123,7 +125,7 @@ See [creative-phase-triggers.mdc](mdc:.cursor/rules/Core%20Implementation/creati
 
 ### Level-Specific Creative Phase Handling
 
-#### Level a: Quick Bug Fix
+#### Level 1: Quick Bug Fix
 For simple bugs that need minimal creative thinking:
 ```
 // Simple creative exploration
@@ -182,9 +184,10 @@ See [creative-phase-examples.mdc](mdc:.cursor/rules/Extended%20Details/creative-
 [ ] 1. INITIALIZATION
 [ ] 2. DOCUMENTATION SETUP 
 [ ] 3. TASK PLANNING
-[ ] 4. IMPLEMENTATION
-[ ] 5. REFLECTION
-[ ] 6. ARCHIVING
+[ ] 4. CREATIVE PHASES
+[ ] 5. IMPLEMENTATION
+[ ] 6. REFLECTION
+[ ] 7. ARCHIVING
 ```
 
 ## 🔄 SECTION UPDATE TEMPLATE
@@ -289,17 +292,27 @@ Key points:
 - **Mark tasks requiring creative phases**
 - Document testing/validation approach
 - Complete the reference check
-- **Complete initial creative phases for architecture/design decisions**
+- **Map out all required creative phases**
 
-### 4️⃣ DETAILED IMPLEMENTATION
+### 4️⃣ FORMAL CREATIVE PHASES
+- **Complete ALL required creative phases before implementation**
+- Document each creative phase with proper markers
+- Include problem breakdown for each component
+- Analyze multiple options with pros/cons
+- Verify each option against requirements
+- Provide clear decision rationale
+- Update tasks.md with creative phase outcomes
+- **Complete creative phase verification**
+
+### 5️⃣ DETAILED IMPLEMENTATION
 - Document each step in detail
 - Execute commands one at a time
-- **Enter creative phases before implementing complex components**
 - Document results (success or failure)
 - Update task status in tasks.md
 - Add implementation details to activeContext.md
+- **Enter additional creative phases if new design decisions arise**
 
-### 5️⃣ FULL REFLECTION
+### 6️⃣ FULL REFLECTION
 - Document all four required reflection subsections
 - Include at least 3 items in "What Went Well"
 - Include at least 2 items in "Challenges"
@@ -307,7 +320,7 @@ Key points:
 - Include at least 3 items in "Improvements for Next Time"
 - Update Memory Bank files with learnings
 
-### 6️⃣ STANDARD ARCHIVING
+### 7️⃣ STANDARD ARCHIVING
 - Archive task in completed_tasks.md
 - Mark task as completed in tasks.md
 - Update progress.md with reference to completed task
@@ -338,13 +351,27 @@ Key points:
 ### 3️⃣ ARCHITECTURAL PLANNING
 - Document detailed goals with measurable success criteria
 - Identify all required resources, tools, and dependencies
-- **Conduct creative phases for all major architectural components**
 - Create hierarchical step-by-step plan with dependencies
 - Document comprehensive testing strategy
 - Identify potential architectural risks
 - Complete all reference checks
+- **Create comprehensive creative phase plan with dependencies**
 
-### 4️⃣ PHASED IMPLEMENTATION
+### 4️⃣ EXHAUSTIVE CREATIVE PHASES
+- **Complete ALL required creative phases before implementation**
+- Use weighted decision matrices for critical decisions
+- Document each creative phase with detailed markers
+- Include comprehensive problem breakdown for each component
+- Analyze multiple options with detailed pros/cons
+- Perform systematic verification against all requirements
+- Document architectural impact of each decision
+- Provide comprehensive decision rationale
+- Include risk assessment for each approach
+- Update systemPatterns.md with architectural decisions
+- Update tasks.md with creative phase outcomes
+- **Perform formal creative phase verification for each component**
+
+### 5️⃣ PHASED IMPLEMENTATION
 - Break implementation into logical phases
 - Document each step with architectural context
 - Execute commands one at a time with validation
@@ -352,8 +379,9 @@ Key points:
 - Update task status in tasks.md after each significant step
 - Add detailed implementation notes to activeContext.md
 - Perform regular verification checks
+- **Enter additional creative phases for any new design decisions**
 
-### 5️⃣ COMPREHENSIVE REFLECTION
+### 6️⃣ COMPREHENSIVE REFLECTION
 - Document extensive reflection with all subsections
 - Include 5+ items in "What Went Well"
 - Include 3+ items in "Challenges"
@@ -362,7 +390,7 @@ Key points:
 - Update all Memory Bank files with learnings
 - Document architectural insights
 
-### 6️⃣ DETAILED ARCHIVING
+### 7️⃣ DETAILED ARCHIVING
 - Create comprehensive archive entry in completed_tasks.md
 - Include architectural decisions and patterns
 - Mark task as completed in tasks.md
@@ -397,11 +425,19 @@ Key points:
 → If any NO: Fix missing items before completing
 ```
 
-### Level 3: Intermediate Feature Checkpoint
-Standard section checkpoints as defined in section-checkpoint-system.mdc
+### Level 3-4: Creative Phase Gateway Checkpoint
+```
+✓ CREATIVE PHASE GATEWAY CHECKPOINT:
+- All required creative phases completed? [YES/NO]
+- Each creative phase properly documented with markers? [YES/NO]
+- Options analyzed with pros/cons for each phase? [YES/NO]
+- Verification against requirements performed? [YES/NO]
+- Decision rationale provided for each phase? [YES/NO]
+- Implementation guidance included for each decision? [YES/NO]
 
-### Level 4: Complex System Checkpoint
-Comprehensive checkpoints as defined in verification-checklist.mdc
+→ If any NO: IMPLEMENTATION BLOCKED - Complete creative phases first
+→ If all YES: Gateway passed - Implementation can proceed
+```
 
 ## 📋 ESCALATION PROCESS
 
@@ -443,9 +479,11 @@ Reason: [Brief explanation]
 - Create clear boundaries between components
 - Document all interfaces and interactions
 - Implement comprehensive testing
+- Complete all creative phases before implementation
 
 ### Level 4: Complex System
 - Prioritize architectural integrity
 - Document all design decisions and alternatives
 - Create reusable patterns
 - Implement staged testing and verification
+- Use weighted decision matrices in creative phases
