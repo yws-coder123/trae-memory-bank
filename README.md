@@ -116,6 +116,65 @@ I'll begin by reviewing the Memory Bank files to understand our current architec
 
 The AI assistant immediately understands what you need, verifies the system files, and begins a structured workflow - with full awareness of your project's context from previous sessions.
 
+## Getting Started: Installation Guide
+
+Setting up the Memory Bank System takes just minutes:
+
+1. **Clone this repository** into your project
+```bash
+# Clone the Memory Bank System
+git clone https://github.com/yourusername/cursor-memory-bank.git
+```
+
+2. **Set up the rule structure in your project**
+
+Cursor's new rule format uses a `.cursor/rules` folder structure for organizing custom rules. You need to:
+
+- Copy the entire `.cursor/rules` folder from this repository to your project
+- If you already have a `.cursor/rules` folder in your project, you'll need to copy the required rules from this repository into your existing folder
+
+3. **Configure User Rules in Cursor**
+
+You still need to add the global rules to Cursor's User Rules section:
+
+- **Copy the global-rules.md content**: The file contains essential instructions for the AI assistant to follow
+- **Open Cursor Settings**: Click on the gear icon in the bottom left or use keyboard shortcut Ctrl+, (Windows/Linux) or Cmd+, (Mac)
+- **Navigate to User Rules**: Go to Cursor Settings > Rules > User Rules (editable section)
+- **Paste the global-rules.md content**: Copy and paste the entire content of global-rules.md into the User Rules text box
+- **Save your settings**: Click "Save" or "Apply" to activate the rules
+
+4. **Verify your configuration**
+- Go to Cursor > Rules
+- Scroll to the bottom
+- You should see all your configured rules listed there
+
+5. **Initialize the system** with a simple "VAN" command
+6. **Start using your AI** with persistent memory
+
+This manual setup is necessary as Cursor requires User Rules to be explicitly added to the settings. Once added, the Memory Bank system will be active and ready to use with the "VAN" command.
+
+## What's New in the Latest Version
+
+Our latest optimization rounds (7 and 8) have significantly enhanced the Memory Bank System with a focus on ensuring quality decision-making for complex tasks:
+
+### Optimization Round 7: Structured Creative Thinking
+
+- **Mandatory Creative Phases**: No longer optional for Level 3-4 tasks
+- **Structured Thinking Framework**: Systematic problem breakdown with verification steps
+- **Task Planning Integration**: Creative phase planning explicitly incorporated into workflow
+- **Enhanced Verification**: Creative phase checks added to all checkpoints
+- **Domain-Specific Templates**: Specialized templates for different design challenges
+
+### Optimization Round 8: Creative Phase Enforcement & Metrics
+
+- **Hard Gateway Implementation**: Strict enforcement prevents skipping design phases
+- **Workflow Structure Enhancement**: Creative phases now an explicit workflow step
+- **Enhanced Checkpoint System**: Dedicated creative phase checkpoints before implementation
+- **Quality Metrics Framework**: Objective evaluation criteria for design decisions
+- **Structured Evaluation Tools**: Decision quality scoring with minimum thresholds
+
+These enhancements were inspired by Anthropic's "Think Tool" concept, which provides AI assistants with dedicated thinking space for complex problem-solving.
+
 ## Understanding the Technical Foundation
 
 ### The Context Window Challenge
@@ -152,56 +211,6 @@ Rules can be:
 - Referenced explicitly when detailed information is needed
 
 This creates a layered memory system that mitigates context limitations while maintaining comprehensive project knowledge.
-
-## Getting Started
-
-Setting up the Memory Bank System takes just minutes:
-
-1. **Clone this repository** into your project
-2. **Add the global rule** to your Cursor settings
-3. **Initialize the system** with a simple "VAN" command
-4. **Start using your AI** with persistent memory
-
-```bash
-# Clone the Memory Bank System
-git clone https://github.com/yourusername/cursor-memory-bank.git
-
-# Follow the setup instructions in docs/INSTALLATION.md
-```
-
-## Setting Up User Rules in Cursor
-
-To enable the Memory Bank system, you need to add the global rules to Cursor's User Rules section:
-
-1. **Copy the global-rules.md content**: The file contains essential instructions for the AI assistant to follow
-2. **Open Cursor Settings**: Click on the gear icon in the bottom left or use keyboard shortcut Ctrl+, (Windows/Linux) or Cmd+, (Mac)
-3. **Navigate to User Rules**: Go to Cursor Settings > Rules > User Rules (editable section)
-4. **Paste the global-rules.md content**: Copy and paste the entire content of global-rules.md into the User Rules text box
-5. **Save your settings**: Click "Save" or "Apply" to activate the rules
-
-This manual step is necessary as Cursor requires User Rules to be explicitly added to the settings. Once added, the Memory Bank system will be active and ready to use with the "VAN" command.
-
-## What's New in the Latest Version
-
-Our latest optimization rounds (7 and 8) have significantly enhanced the Memory Bank System with a focus on ensuring quality decision-making for complex tasks:
-
-### Optimization Round 7: Structured Creative Thinking
-
-- **Mandatory Creative Phases**: No longer optional for Level 3-4 tasks
-- **Structured Thinking Framework**: Systematic problem breakdown with verification steps
-- **Task Planning Integration**: Creative phase planning explicitly incorporated into workflow
-- **Enhanced Verification**: Creative phase checks added to all checkpoints
-- **Domain-Specific Templates**: Specialized templates for different design challenges
-
-### Optimization Round 8: Creative Phase Enforcement & Metrics
-
-- **Hard Gateway Implementation**: Strict enforcement prevents skipping design phases
-- **Workflow Structure Enhancement**: Creative phases now an explicit workflow step
-- **Enhanced Checkpoint System**: Dedicated creative phase checkpoints before implementation
-- **Quality Metrics Framework**: Objective evaluation criteria for design decisions
-- **Structured Evaluation Tools**: Decision quality scoring with minimum thresholds
-
-These enhancements were inspired by Anthropic's "Think Tool" concept, which provides AI assistants with dedicated thinking space for complex problem-solving.
 
 ## Frequently Asked Questions
 
