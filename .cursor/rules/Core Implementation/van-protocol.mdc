@@ -3,6 +3,11 @@ description: Adaptive VAN protocol implementation
 globs: 
 alwaysApply: true
 ---
+---
+description: Adaptive VAN protocol implementation with enhanced path detection
+globs: 
+alwaysApply: true
+---
 # ADAPTIVE VAN PROTOCOL
 
 > **TL;DR:** When user types "VAN", respond with "OK VAN", determine task complexity level, and adapt the workflow process accordingly. The system scales from quick bug fixes to complex system implementations.
@@ -61,10 +66,29 @@ Analyze the task to determine the appropriate complexity level:
 
 Check for critical files and create them if missing:
 
-1. Ensure `.cursorrules` exists (as a file, not directory)
-2. Ensure `memory-bank` directory exists
-3. Ensure `docs/archive` directory exists
-4. Ensure all core Memory Bank files exist, including tasks.md
+1. **Define Project Root**:
+   - Identify the directory containing `.cursorrules` as PROJECT_ROOT
+   - Log this absolute path for reference: PROJECT_ROOT = [absolute path]
+
+2. **Check paths using absolute references**:
+   - Check `.cursorrules` exists (as a file, not directory)
+   - Check `memory-bank` directory exists at PROJECT_ROOT/memory-bank
+   - Check `docs/archive` directory exists at PROJECT_ROOT/docs/archive
+   - Check all core Memory Bank files exist, including tasks.md
+
+3. **If memory-bank not found at default location**:
+   - Search recursively for any directory named "memory-bank" in PROJECT_ROOT
+   - If found, use that location: FOUND_PATH
+   - Update reference in output: "Using existing memory-bank found at [FOUND_PATH]"
+   - If not found, create at default location: PROJECT_ROOT/memory-bank
+
+4. **Confirm locations to user**:
+   ```
+   ## PATH VERIFICATION
+   📁 PROJECT ROOT: [absolute path]
+   📁 MEMORY BANK: [path to memory-bank]
+   📁 ARCHIVE: [path to docs/archive]
+   ```
 
 ## 🔄 LEVEL-SPECIFIC RESPONSE FORMATS
 
@@ -80,6 +104,8 @@ Objective: Fix the issue and restore functionality
 
 ## FILE VERIFICATION
 [X] Critical files checked/created
+📁 MEMORY BANK: [path to memory-bank]
+📁 ARCHIVE: [path to docs/archive]
 
 ## PLATFORM DETECTION
 Current environment: [Windows/Mac/Linux]
@@ -103,6 +129,8 @@ Objective: [Specific objective]
 
 ## FILE VERIFICATION
 [X] Critical files checked/created
+📁 MEMORY BANK: [path to memory-bank]
+📁 ARCHIVE: [path to docs/archive]
 
 ## PLATFORM DETECTION
 Current environment: [Windows/Mac/Linux]
@@ -127,6 +155,8 @@ Objective: [Specific objective]
 
 ## FILE VERIFICATION
 [X] Critical files checked/created
+📁 MEMORY BANK: [path to memory-bank]
+📁 ARCHIVE: [path to docs/archive]
 
 ## PLATFORM DETECTION
 Current environment: [Windows/Mac/Linux]
@@ -156,6 +186,8 @@ Objective: [Specific objective]
 
 ## FILE VERIFICATION
 [X] Critical files checked/created
+📁 MEMORY BANK: [path to memory-bank]
+📁 ARCHIVE: [path to docs/archive]
 
 ## PLATFORM DETECTION
 Current environment: [Windows/Mac/Linux]
@@ -211,6 +243,8 @@ Before proceeding after VAN:
 - Have I set up the appropriate level of tracking?
 - Have I made the verification commitment (for Levels 3-4)?
 - Am I ready to start the workflow?
+- **Have I correctly identified the memory-bank location?**
+- **Have I documented where memory-bank files will be read from/written to?**
 
 ## 🎨 CREATIVE PHASE HANDLING
 
@@ -303,4 +337,19 @@ OK VAN VERIFY
 Performing complete system verification...
 ```
 
-Then proceed with standard verification process.
+Then proceed with standard verification process, including explicit verification of memory-bank paths:
+
+```
+## PATH VERIFICATION
+📁 PROJECT ROOT: [absolute path]
+📁 MEMORY BANK: [path to memory-bank]
+📁 ARCHIVE: [path to docs/archive]
+
+Checking critical files:
+- [✓] .cursorrules: [path]/.cursorrules
+- [✓] memory-bank: [path]/memory-bank
+- [✓] docs/archive: [path]/docs/archive
+- [✓] tasks.md: [path]/memory-bank/tasks.md
+
+All memory bank files will be read from and written to: [path]/memory-bank/
+``` 
