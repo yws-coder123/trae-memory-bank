@@ -123,7 +123,7 @@ Setting up the Memory Bank System takes just minutes:
 1. **Clone this repository** into your project
 ```bash
 # Clone the Memory Bank System
-git clone https://github.com/yourusername/cursor-memory-bank.git
+git clone https://github.com/vanzan01/cursor-memory-bank.git
 ```
 
 2. **Set up the rule structure in your project**
@@ -241,7 +241,7 @@ For more detailed information about the Memory Bank System:
 
 Stop accepting that your AI assistant forgets everything. With the Cursor Memory Bank System, you can finally have a truly persistent AI development partner.
 
-[Get Started Now](#getting-started) | [View on GitHub](https://github.com/yourusername/cursor-memory-bank) | [Report Issues](https://github.com/yourusername/cursor-memory-bank/issues)
+[Get Started Now](#getting-started) | [View on GitHub](https://github.com/vanzan01/cursor-memory-bank) | [Report Issues](https://github.com/vanzan01/cursor-memory-bank/issues)
 
 ---
 

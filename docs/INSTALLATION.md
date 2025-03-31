@@ -4,7 +4,7 @@
 
 ## Prerequisites
 
-- [Cursor IDE](https://cursor.sh/) installed
+- [Cursor IDE](https://cursor.com/) installed
 - Basic understanding of file systems and terminal commands
 - Project where you want to implement the Memory Bank System
 
@@ -16,110 +16,81 @@ Clone this repository into your project or download the files directly:
 
 ```bash
 # From your project's root directory
-git clone https://github.com/yourusername/cursor-memory-bank.git
+git clone https://github.com/vanzan01/cursor-memory-bank.git
 ```
 
-### 2. Set Up the Directory Structure
+### 2. Set Up the Rule Structure in Your Project
 
-Create the required directory structure:
+Cursor's new rule format uses a `.cursor/rules` folder structure for organizing custom rules. You need to:
 
-```bash
-# Create the .cursor/rules directories
-mkdir -p .cursor/rules/Core\ Implementation
-mkdir -p .cursor/rules/Extended\ Details
-mkdir -p .cursor/rules/Templates
+- Copy the entire `.cursor/rules` folder from this repository to your project
+- If you already have a `.cursor/rules` folder in your project, you'll need to copy the required rules from this repository into your existing folder
 
-# Create memory-bank and archive directories
-mkdir -p memory-bank
-mkdir -p docs/archive
-```
+### 3. Configure User Rules in Cursor
 
-### 3. Configure the Global Rules
+You still need to add the global rules to Cursor's User Rules section:
 
-1. Open Cursor IDE
-2. Go to Settings > General > Rules for AI
-3. Add the following code to your rules:
+- **Copy the global-rules.md content**: The file contains essential instructions for the AI assistant to follow
+- **Open Cursor Settings**: Click on the gear icon in the bottom left or use keyboard shortcut Ctrl+, (Windows/Linux) or Cmd+, (Mac)
+- **Navigate to User Rules**: Go to Cursor Settings > Rules > User Rules (editable section)
+- **Paste the global-rules.md content**: Copy and paste the entire content of global-rules.md into the User Rules text box
+- **Save your settings**: Click "Save" or "Apply" to activate the rules
 
-```markdown
-# ADAPTIVE MEMORY-BASED ASSISTANT
-
-> I am an AI with memory that resets between sessions. I use a structured Memory Bank system that adapts to task complexity. For any task, I identify the appropriate complexity level (1-4) and follow a scaled workflow process.
-
-## 🚨 CRITICAL FIRST STEPS
-1. Identify current operating system
-2. Ensure `.cursorrules` file exists
-3. Ensure `memory-bank/` directory with required files exists
-4. Ensure `docs/archive/` directory with `completed_tasks.md` exists
-5. Identify task complexity level (1-4)
-
-## 📚 MEMORY BANK OVERVIEW
-I maintain these core files:
-- `projectbrief.md` - Foundation defining requirements and goals
-- `productContext.md` - Why this project exists and problems it solves
-- `activeContext.md` - Current work focus and recent changes
-- `systemPatterns.md` - System architecture and key technical decisions
-- `techContext.md` - Technologies used and development setup
-- `progress.md` - What works, what's left, and implementation details
-- `tasks.md` - SINGLE SOURCE OF TRUTH for all task tracking
-
-## 🔄 ADAPTIVE WORKFLOW
-I scale my workflow process based on task complexity:
-
-**Level 1**: INITIALIZATION → IMPLEMENTATION → DOCUMENTATION
-**Level 2**: INITIALIZATION → DOCUMENTATION → PLANNING → IMPLEMENTATION → REFLECTION → ARCHIVING
-**Level 3-4**: Full 6-step workflow with standard/comprehensive documentation
-
-## ⚡ CORE PRINCIPLES
-1. **Adaptive Process** - Match process rigor to task complexity
-2. **Documentation First** - Memory Bank maintenance is my primary responsibility
-3. **Safe Command Execution** - I run commands ONE AT A TIME, never chained
-4. **Single Source of Truth** - tasks.md is the ONLY place to track task status
-5. **Real-Time Documentation** - I add updates to activeContext.md during implementation
-6. **Creative Phase Handling** - I explicitly mark creative phases and return to task tracking after
-7. **VAN Protocol** - When you say "VAN", I respond with "OK VAN", determine complexity, and begin the appropriate process
-```
-
-### 4. Create Memory Bank Files
-
-Create the initial memory bank files:
-
-```bash
-# Create the Memory Bank files
-touch memory-bank/projectbrief.md
-touch memory-bank/productContext.md
-touch memory-bank/activeContext.md
-touch memory-bank/systemPatterns.md
-touch memory-bank/techContext.md
-touch memory-bank/progress.md
-touch memory-bank/tasks.md
-
-# Create the archive file
-touch docs/archive/completed_tasks.md
-
-# Create the .cursorrules file (not a directory)
-touch .cursorrules
-```
+### 4. Verify Your Configuration
+- Go to Cursor > Rules
+- Scroll to the bottom
+- You should see all your configured rules listed there
 
 ### 5. Initialize the System
 
-1. Open your project in Cursor IDE
-2. Type "VAN" in a new chat message to the AI assistant
-3. The AI should respond with "OK VAN" and begin file verification
-4. Follow the AI's guidance to complete initialization
+Initialize the system with a simple "VAN" command in the Cursor AI chat. This will:
+- Verify all required files and directories exist
+- Create any missing components
+- Set up the Memory Bank structure
 
-### 6. Test the System
+### 6. Start Using Your AI with Persistent Memory
 
-Test the system by adding a simple task:
+After initialization, you can begin using the "VAN" command followed by your task description:
 
 ```
 VAN I need to add a basic README file to my project
 ```
 
-The AI should:
-1. Identify the complexity level of this task
-2. Follow the appropriate workflow based on complexity
-3. Create/update Memory Bank files as needed
-4. Execute the task with appropriate documentation
+## Directory Structure
+
+After setup, your project should have this structure:
+
+```
+.cursor/
+└── rules/
+    ├── main.mdc                      # Master control file with references
+    ├── system-overview.mdc           # High-level system overview
+    │
+    ├── Core Implementation/          # Core rule implementations
+    │   ├── creative-phase-enforcement.mdc   # Hard enforcement mechanisms
+    │   ├── creative-phase-metrics.mdc       # Quality metrics framework
+    │   └── [other core files]              # Additional implementation files
+    │
+    ├── Extended Details/             # Detailed examples and references
+    │   ├── creative-phase-examples.mdc      # Example creative phases
+    │   └── [other example files]           # Additional example files
+    │
+    └── Templates/                    # Document templates
+
+Project Root:
+├── memory-bank/                # Primary memory storage
+│   ├── projectbrief.md         # Project requirements and goals
+│   ├── productContext.md       # Why this project exists
+│   ├── activeContext.md        # Current work focus
+│   ├── systemPatterns.md       # Architecture patterns
+│   ├── techContext.md          # Technologies used
+│   ├── progress.md             # Implementation status
+│   └── tasks.md                # SINGLE SOURCE OF TRUTH for task tracking
+├── .cursorrules                # Project-specific patterns
+└── docs/
+    └── archive/
+        └── completed_tasks.md  # Archived completed tasks
+```
 
 ## Troubleshooting
 
@@ -145,17 +116,37 @@ The AI should:
 
 After installation:
 
-1. Review [architecture.md](./architecture.md) for detailed system documentation
+1. Review the [README.md](../README.md) for detailed system documentation
 2. Customize the Memory Bank files with your project's specific information
 3. Begin using the "VAN" command to initiate tasks with the AI
 
-## Advanced Configuration
+## Adaptive Complexity Levels
 
-For advanced users:
+The system scales across four complexity levels:
 
-1. Customize the workflow by modifying `.cursor/rules/` files
-2. Add project-specific patterns to the `.cursorrules` file
-3. Create templates for common tasks in `.cursor/rules/Templates/`
+1. **Level 1: Quick Bug Fix**
+   - Simple errors, UI glitches, minor issues
+   - Streamlined process with targeted documentation
+   - 2-3 task updates (start/fix/end)
+   - Focus: Fix the specific issue
+
+2. **Level 2: Simple Enhancement**
+   - Small features, minor improvements
+   - Basic process with essential documentation
+   - 4-6 task updates at key milestones
+   - Focus: Clean implementation with clear documentation
+
+3. **Level 3: Intermediate Feature**
+   - Complete features, significant changes
+   - Standard process with full section tracking
+   - 8-12 task updates at defined points
+   - Focus: Comprehensive planning and documentation
+
+4. **Level 4: Complex System**
+   - Major systems, architectural changes
+   - Full formal process with detailed checkpoints
+   - 15+ task updates with formal verification
+   - Focus: Architectural integrity and complete documentation
 
 ## Support
 
@@ -163,4 +154,4 @@ If you encounter issues with the installation:
 
 1. Check the [Common Implementation Challenges](../README.md#-common-implementation-challenges) section in the README
 2. Ensure all required files and directories are correctly named and placed
-3. Review the detailed [architecture documentation](./architecture.md) 
+3. Open an issue on the [GitHub repository](https://github.com/vanzan01/cursor-memory-bank/issues) 
