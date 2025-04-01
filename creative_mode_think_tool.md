@@ -9,17 +9,17 @@ The following diagram illustrates the conceptual similarities between Claude's "
 ```mermaid
 graph TD
     subgraph "Claude Think Tool Approach"
-        CT1[1. Decompose Problem] --> CT2[2. Explore Solution Space]
-        CT2 --> CT3[3. Analyze Trade-offs]
-        CT3 --> CT4[4. Select & Document Decision]
-        CT4 --> CT5[5. Validate Decision]
+        CT1["1: Decompose Problem"] --> CT2["2: Explore Solution Space"]
+        CT2 --> CT3["3: Analyze Trade-offs"]
+        CT3 --> CT4["4: Select & Document Decision"]
+        CT4 --> CT5["5: Validate Decision"]
     end
     
     subgraph "Memory Bank CREATIVE Mode"
-        CM1[1. Component Breakdown] --> CM2[2. Option Exploration]
-        CM2 --> CM3[3. Trade-off Analysis]
-        CM3 --> CM4[4. Decision Documentation]
-        CM4 --> CM5[5. Decision Verification]
+        CM1["1: Component Breakdown"] --> CM2["2: Option Exploration"]
+        CM2 --> CM3["3: Trade-off Analysis"]
+        CM3 --> CM4["4: Decision Documentation"]
+        CM4 --> CM5["5: Decision Verification"]
     end
     
     style CT1 fill:#f9d77e,stroke:#d9b95c
