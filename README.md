@@ -83,7 +83,8 @@ This implementation will continue to be refined and optimized as Claude's capabi
 Simply clone this repository into your project directory:
 
 ```
-git clone https://github.com/vanzan01/memory-bank.git
+git clone https://github.com/vanzan01/cursor-memory-bank.git
+
 ```
 
 Alternatively, you can download the ZIP file from GitHub and extract it to your project folder.
