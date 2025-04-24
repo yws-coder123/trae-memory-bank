@@ -2,7 +2,7 @@
 
 Your role is to perform detailed design and architecture work for components flagged during the planning phase.
 
-<mermaid>
+```mermaid
 graph TD
     Start["🚀 START CREATIVE MODE"] --> ReadTasks["📚 Read tasks.md &<br>implementation-plan.md<br>.cursor/rules/isolation_rules/main.mdc"]
     
@@ -71,7 +71,7 @@ graph TD
     style MoreComponents fill:#d94dbb,stroke:#a3378a,color:white
     style VerifyAll fill:#4dbbbb,stroke:#368787,color:white
     style Transition fill:#5fd94d,stroke:#3da336,color:white
-</mermaid> 
+```
 
 ## IMPLEMENTATION STEPS
 
@@ -149,7 +149,7 @@ Your task is to generate multiple design options for components flagged during p
 
 When working on architectural components, focus on defining the system structure, component relationships, and technical foundations. Generate multiple architectural approaches and evaluate each against requirements.
 
-<mermaid>
+```mermaid
 graph TD
     AD["🏗️ ARCHITECTURE DESIGN"] --> Req["Define requirements & constraints"]
     Req --> Options["Generate 2-4 architecture options"]
@@ -167,13 +167,13 @@ graph TD
     style Eval fill:#cce6ff,stroke:#80bfff
     style Select fill:#cce6ff,stroke:#80bfff
     style Doc fill:#cce6ff,stroke:#80bfff
-</mermaid>
+```
 
 ### Algorithm Design Process
 
 For algorithm components, focus on efficiency, correctness, and maintainability. Consider time and space complexity, edge cases, and scalability when evaluating different approaches.
 
-<mermaid>
+```mermaid
 graph TD
     ALGO["⚙️ ALGORITHM DESIGN"] --> Req["Define requirements & constraints"]
     Req --> Options["Generate 2-4 algorithm options"]
@@ -195,13 +195,13 @@ graph TD
     style Scale fill:#d6f5dd,stroke:#a3e0ae
     style Select fill:#d6f5dd,stroke:#a3e0ae
     style Doc fill:#d6f5dd,stroke:#a3e0ae
-</mermaid>
+```
 
 ### UI/UX Design Process
 
 For UI/UX components, focus on user experience, accessibility, consistency with design patterns, and visual clarity. Consider different interaction models and layouts when exploring options.
 
-<mermaid>
+```mermaid
 graph TD
     UIUX["🎨 UI/UX DESIGN"] --> Req["Define requirements & user needs"]
     Req --> Options["Generate 2-4 design options"]
@@ -223,13 +223,13 @@ graph TD
     style Comp fill:#ffe6cc,stroke:#ffa64d
     style Select fill:#ffe6cc,stroke:#ffa64d
     style Doc fill:#ffe6cc,stroke:#ffa64d
-</mermaid>
+```
 
 ## CREATIVE PHASE DOCUMENTATION
 
 Document each creative phase with clear entry and exit markers. Start by describing the component and its requirements, then explore multiple options with their pros and cons, and conclude with a recommended approach and implementation guidelines.
 
-<mermaid>
+```mermaid
 graph TD
     CPD["🎨 CREATIVE PHASE DOCUMENTATION"] --> Entry["🎨🎨🎨 ENTERING CREATIVE PHASE: [TYPE]"]
     Entry --> Desc["Component Description<br>What is this component? What does it do?"]
@@ -251,11 +251,11 @@ graph TD
     style Impl fill:#f5d9f0,stroke:#e699d9
     style Verify fill:#f5d9f0,stroke:#e699d9
     style Exit fill:#f5d9f0,stroke:#e699d9
-</mermaid>
+```
 
 ## VERIFICATION
 
-<mermaid>
+```mermaid
 graph TD
     V["✅ VERIFICATION CHECKLIST"] --> C["All flagged components addressed?"]
     V --> O["Multiple options explored for each component?"]
@@ -272,6 +272,6 @@ graph TD
     style Decision fill:#ffa64d,stroke:#cc7a30,color:white
     style Complete fill:#5fd94d,stroke:#3da336,color:white
     style Fix fill:#ff5555,stroke:#cc0000,color:white
-</mermaid>
+```
 
 Before completing the creative phase, verify that all flagged components have been addressed with multiple options explored, pros and cons analyzed, recommendations justified, and implementation guidelines provided. Update tasks.md with the design decisions and prepare for the implementation phase. 
