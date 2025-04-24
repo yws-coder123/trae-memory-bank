@@ -151,7 +151,7 @@ graph TD
     style IS fill:#cce6ff,stroke:#80bfff
     style PC fill:#cce6ff,stroke:#80bfff
     style TS fill:#cce6ff,stroke:#80bfff
-```mermaid
+```
 
 ### Level 3-4: Comprehensive Planning
 
