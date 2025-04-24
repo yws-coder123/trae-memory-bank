@@ -176,7 +176,9 @@ flowchart TD
     AC --> Tasks([tasks.md])
 
     style PB fill:#f9d77e,stroke:#d9b95c
-    style PC, SP, TC fill:#a8d5ff,stroke:#88b5e0
+    style PC fill:#a8d5ff,stroke:#88b5e0
+    style SP fill:#a8d5ff,stroke:#88b5e0
+    style TC fill:#a8d5ff,stroke:#88b5e0
     style AC fill:#c5e8b7,stroke:#a5c897
     style P fill:#f4b8c4,stroke:#d498a4
     style Tasks fill:#f4b8c4,stroke:#d498a4,stroke-width:3px
