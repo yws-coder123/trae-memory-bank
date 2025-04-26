@@ -2,7 +2,7 @@
 
 Your role is to create a detailed plan for task execution based on the complexity level determined in the INITIALIZATION mode.
 
-<mermaid>
+```mermaid
 graph TD
     Start["🚀 START PLANNING"] --> ReadTasks["📚 Read tasks.md<br>.cursor/rules/isolation_rules/main.mdc"]
     
@@ -65,7 +65,7 @@ graph TD
     style CheckCreative fill:#d971ff,stroke:#a33bc2,color:white
     style RecCreative fill:#ffa64d,stroke:#cc7a30
     style RecImplement fill:#4dbb5f,stroke:#36873f
-</mermaid>
+```
 
 ## IMPLEMENTATION STEPS
 
@@ -135,7 +135,7 @@ Create a detailed implementation plan based on the complexity level determined d
 
 For Level 2 tasks, focus on creating a streamlined plan that identifies the specific changes needed and any potential challenges. Review the codebase structure to understand the areas affected by the enhancement and document a straightforward implementation approach.
 
-<mermaid>
+```mermaid
 graph TD
     L2["📝 LEVEL 2 PLANNING"] --> Doc["Document plan with these components:"]
     Doc --> OV["📋 Overview of changes"]
@@ -151,13 +151,13 @@ graph TD
     style IS fill:#cce6ff,stroke:#80bfff
     style PC fill:#cce6ff,stroke:#80bfff
     style TS fill:#cce6ff,stroke:#80bfff
-</mermaid>
+```
 
 ### Level 3-4: Comprehensive Planning
 
 For Level 3-4 tasks, develop a comprehensive plan that addresses architecture, dependencies, and integration points. Identify components requiring creative phases and document detailed requirements. For Level 4 tasks, include architectural diagrams and propose a phased implementation approach.
 
-<mermaid>
+```mermaid
 graph TD
     L34["📊 LEVEL 3-4 PLANNING"] --> Doc["Document plan with these components:"]
     Doc --> RA["📋 Requirements analysis"]
@@ -179,11 +179,11 @@ graph TD
     style DP fill:#ffe6cc,stroke:#ffa64d
     style CM fill:#ffe6cc,stroke:#ffa64d
     style CP fill:#ffe6cc,stroke:#ffa64d
-</mermaid>
+```
 
 ## CREATIVE PHASE IDENTIFICATION
 
-<mermaid>
+```mermaid
 graph TD
     CPI["🎨 CREATIVE PHASE IDENTIFICATION"] --> Question{"Does the component require<br>design decisions?"}
     Question -->|"Yes"| Identify["Flag for Creative Phase"]
@@ -199,13 +199,13 @@ graph TD
     style Identify fill:#ffa64d,stroke:#cc7a30
     style Skip fill:#4dbb5f,stroke:#36873f
     style Types fill:#ffe6cc,stroke:#ffa64d
-</mermaid>
+```
 
 Identify components that require creative problem-solving or significant design decisions. For these components, flag them for the CREATIVE mode. Focus on architectural considerations, algorithm design needs, or UI/UX requirements that would benefit from structured design exploration.
 
 ## VERIFICATION
 
-<mermaid>
+```mermaid
 graph TD
     V["✅ VERIFICATION CHECKLIST"] --> P["Plan addresses all requirements?"]
     V --> C["Components requiring creative phases identified?"]
@@ -220,6 +220,6 @@ graph TD
     style Decision fill:#ffa64d,stroke:#cc7a30,color:white
     style Complete fill:#5fd94d,stroke:#3da336,color:white
     style Fix fill:#ff5555,stroke:#cc0000,color:white
-</mermaid>
+```
 
 Before completing the planning phase, verify that all requirements are addressed in the plan, components requiring creative phases are identified, implementation steps are clearly defined, and dependencies and challenges are documented. Update tasks.md with the complete plan and recommend the appropriate next mode based on whether creative phases are required. 
