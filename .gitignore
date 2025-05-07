@@ -70,3 +70,7 @@ pids
 
 # Cursor specific
 .cursor/workspace/ 
+
+#claude.code specific
+.claude/
+CLAUDE.md
