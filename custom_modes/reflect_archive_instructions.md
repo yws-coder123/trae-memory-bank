@@ -44,21 +44,6 @@ graph TD
     %% Exit
     ArchiveComplete --> SuggestNext["✅ Task Fully Completed<br>Suggest VAN Mode for Next Task"]
     
-    %% Styling
-    style Start fill:#d9b3ff,stroke:#b366ff,color:white
-    style ReadDocs fill:#e6ccff,stroke:#d9b3ff
-    style VerifyImplement fill:#ffa64d,stroke:#cc7a30,color:white
-    style LoadReflectMap fill:#a3dded,stroke:#4db8db
-    style ReflectProcess fill:#4dbb5f,stroke:#36873f,color:white
-    style ReflectComplete fill:#4dbb5f,stroke:#36873f,color:white
-    style PromptArchive fill:#f8d486,stroke:#e8b84d
-    style UserCommand fill:#f8d486,stroke:#e8b84d
-    style LoadArchiveMap fill:#a3dded,stroke:#4db8db
-    style ArchiveProcess fill:#4da6ff,stroke:#0066cc,color:white
-    style ArchiveComplete fill:#4da6ff,stroke:#0066cc,color:white
-    style SuggestNext fill:#5fd94d,stroke:#3da336,color:white
-    style ReturnImplement fill:#ff5555,stroke:#cc0000,color:white
-    style ErrorReflect fill:#ff5555,stroke:#cc0000,color:white
 Use code with caution.
 Markdown
 IMPLEMENTATION STEPS
@@ -115,15 +100,6 @@ graph TD
     UpdateTasks --> CreateDoc["📄 Create reflection.md"]
     CreateDoc --> Prompt["💬 Prompt for 'ARCHIVE NOW'"]
 
-    style ReflectStart fill:#4dbb5f,stroke:#36873f,color:white
-    style Review fill:#d6f5dd,stroke:#a3e0ae
-    style Success fill:#d6f5dd,stroke:#a3e0ae
-    style Challenges fill:#d6f5dd,stroke:#a3e0ae
-    style Lessons fill:#d6f5dd,stroke:#a3e0ae
-    style Improvements fill:#d6f5dd,stroke:#a3e0ae
-    style UpdateTasks fill:#d6f5dd,stroke:#a3e0ae
-    style CreateDoc fill:#d6f5dd,stroke:#a3e0ae
-    style Prompt fill:#f8d486,stroke:#e8b84d
 Use code with caution.
 Mermaid
 Goal: Facilitate a structured review, capture key insights in reflection.md, and update tasks.md to reflect completion of the reflection phase.
@@ -137,13 +113,6 @@ graph TD
     UpdateTasks --> UpdateActive["🔄 Update activeContext.md<br>Reset for Next Task"]
     UpdateActive --> Complete["🏁 ARCHIVING COMPLETE"]
 
-    style ArchiveStart fill:#4da6ff,stroke:#0066cc,color:white
-    style Verify fill:#cce6ff,stroke:#80bfff
-    style CreateDoc fill:#cce6ff,stroke:#80bfff
-    style UpdateTasks fill:#cce6ff,stroke:#80bfff
-    style UpdateProgress fill:#cce6ff,stroke:#80bfff
-    style UpdateActive fill:#cce6ff,stroke:#80bfff
-    style Complete fill:#cce6ff,stroke:#80bfff
 Use code with caution.
 Mermaid
 Goal: Consolidate final documentation, create the formal archive record in docs/archive/, update all relevant Memory Bank files to mark the task as fully complete, and prepare the context for the next task.
