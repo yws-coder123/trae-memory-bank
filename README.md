@@ -1,12 +1,13 @@
-# Memory Bank System v0.7-beta
+# Trae 版本的 Memory Bank System v0.7-beta
 
-https://github.com/vanzan01/cursor-memory-bank 项目的Trae版本，本项目进行了如下改动：
+本项目为 [https://github.com/vanzan01/cursor-memory-bank](https://github.com/vanzan01/cursor-memory-bank) 项目的Trae版本，本项目进行了如下改动：
 1. 使用AI把说明文档修改为Trae版本并做了翻译，把一些概念从cursor迁移到trae，如：
    - custom mode --> 自定义智能体
-2. 对原项目提供的agent的system prompt进行了翻译。
-3. 添加一个实践教程。
+2. 对原项目提供的prompt进行了删减，因为Trae的自定义智能体有10000字符的提示词限制。
 
-本项目一个针对令牌优化的分层任务管理系统，使用Trae的自定义Agent，旨在提升开发工作流程的效率。
+> **Note**: 此项目提供系统提示词非常长，注意Tokens消耗。
+
+Memory Bank是一个针对令牌优化的分层任务管理系统，使用Trae的自定义Agent，旨在提升开发工作流程的效率。
 
 ```mermaid
 graph TD
@@ -132,54 +133,52 @@ git clone https://github.com/vanzan01/cursor-memory-bank.git
    - **工具**: 启用 "File system", "Terminal"
    - **提示词**: 从 `custom_modes/creative_instructions.md` 黏贴
 
-4. **IMPLEMENT MODE** (Code Implementation)
-   - **Name**: ⚒️ IMPLEMENT
-   - **Tools**: Enable all tools
-   - **Advanced options**: Paste from `custom_modes/implement_instructions.md`
+4. **IMPLEMENT MODE** (代码实现)
+   - **名称**: ⚒️ IMPLEMENT
+   - **工具**: 启用 "File system", "Terminal"
+   - **提示词**: 从 `custom_modes/implement_instructions.md` 黏贴
 
-5. **REFLECT MODE** (Review)
-   - **Name**: 🔍 REFLECT
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory"
-   - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md` (REFLECT section)
+5. **REFLECT MODE** (审查)
+   - **名称**: 🔍 REFLECT
+   - **工具**: 启用 "File system", "Terminal"
+   - **提示词**: 从 `custom_modes/reflect_archive_instructions.md` (REFLECT section) 黏贴
    
-6. **ARCHIVE MODE** (Documentation)
-   - **Name**: 📚 ARCHIVE
-   - **Tools**: Enable "Codebase Search", "Read File", "Terminal", "List Directory", "Edit File"
-   - **Advanced options**: Paste from `custom_modes/reflect_archive_instructions.md` (ARCHIVE section)
+6. **ARCHIVE MODE** (审查)
+   - **名称**: 📚 ARCHIVE
+   - **工具**: 启用 "File system", "Terminal"
+   - **提示词**: 从 `custom_modes/reflect_archive_instructions.md` (ARCHIVE section) 黏贴
 
-> **Note**: REFLECT and ARCHIVE instructions are combined in a single file to optimize for Cursor's character limits while maintaining functionality. Thanks to GitHub user @joshmac007 for implementing this optimization.
+> 注意：REFLECT 和 ARCHIVE 指令合并在一个文件中，以优化 Cursor 的字符限制
 
-For additional help on setting up custom modes in Cursor, refer to the [official Cursor documentation on custom modes](https://docs.cursor.com/chat/custom-modes).
+### QA 功能
 
-### QA Functionality
+QA（质量保证）不是一个独立的自定义模式，而是一组可以从任何模式中调用的验证函数。您可以在任何模式中键入 “QA” 来执行技术验证。这种方式提供了在开发过程的任何阶段进行验证的灵活性。
 
-QA is not a separate custom mode but rather a set of validation functions that can be called from any mode. You can invoke QA capabilities by typing "QA" in any mode when you need to perform technical validation. This approach provides flexibility to conduct verification at any point in the development process.
+## 基本使用
 
-## Basic Usage
+1. **从 VAN 智能体开始：**
+   - 在Trae的聊天框里选择 VAN 智能体
+   - 输入命令 "VAN" 开始初始化过程
+   - VAN 智能体将分析您的项目结构并确定复杂性
 
-1. **Start with VAN Mode**:
-   - Switch to VAN mode in Cursor
-   - Type "VAN" to initiate the initialization process
-   - VAN will analyze your project structure and determine complexity
-
-2. **Follow the Workflow Based on Complexity**:
-   - **Level 1 tasks**: May proceed directly to IMPLEMENT after VAN
-   - **Level 2 tasks**: Simplified workflow (VAN → PLAN → IMPLEMENT → REFLECT)
-   - **Level 3-4 tasks**: Full workflow (VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE)
-   - **At any point**: Type "QA" to perform technical validation
+2. **根据复杂度遵循工作流程：**
+   - **Level 1 tasks**: 可以在 VAN 之后直接进入 IMPLEMENT
+   - **Level 2 tasks**: 简化流程（VAN → PLAN → IMPLEMENT → REFLECT）
+   - **Level 3-4 tasks**: 完整流程（VAN → PLAN → CREATIVE → IMPLEMENT → REFLECT → ARCHIVE）
+   - **At any point**: 输入 “QA” 可执行技术验证
 
 3. **Mode-Specific Commands**:
    ```
-   VAN - Initialize project and determine complexity
-   PLAN - Create detailed implementation plan
-   CREATIVE - Explore design options for complex components
-   IMPLEMENT - Systematically build planned components
-   REFLECT - Review and document lessons learned
-   ARCHIVE - Create comprehensive documentation
-   QA - Validate technical implementation (can be called from any mode)
+   VAN - 初始化项目并评估复杂度
+   PLAN - 创建详细的实现计划
+   CREATIVE - 探索复杂组件的设计方案
+   IMPLEMENT - 按计划系统性地构建组件
+   REFLECT - 回顾并记录所学经验
+   ARCHIVE - 编写完整的项目文档
+   QA - 验证技术实现（可在任意模式中调用）
    ```
 
-## Core Files and Their Purposes
+## 核心文件与作用
 
 ```mermaid
 graph LR
@@ -198,31 +197,32 @@ graph LR
     style Reflect fill:#b3e6cc,stroke:#66c999
 ```
 
-- **tasks.md**: Central source of truth for task tracking
-- **activeContext.md**: Maintains focus of current development phase
-- **progress.md**: Tracks implementation status
-- **creative-*.md**: Design decision documents generated during CREATIVE mode
-- **reflect-*.md**: Review documents created during REFLECT mode
+- **tasks.md**: 任务追踪的主数据源
+- **activeContext.md**: 记录当前开发阶段的聚焦内容
+- **progress.md**: 跟踪任务的实现进度
+- **creative-*.md**: CREATIVE 模式生成的设计文档
+- **reflect-*.md**: REFLECT 模式生成的回顾记录
 
-## Troubleshooting
+## 故障排除
 
-### Common Issues
+### 常见问题
 
-1. **Mode not responding correctly**:
-   - Verify custom instructions were copied completely (this is the most common issue)
-   - Ensure the correct tools are enabled for each mode
-   - Check that you've switched to the correct mode before issuing commands
-   - Make sure you pasted the instructions in the "Advanced options" text box
 
-2. **Rules not loading**:
-   - Make sure the `.cursor/rules/isolation_rules/` directory is in the correct location
-   - Verify file permissions allow reading the rule files
+1. *智能体响应不正常：**
+   - 检查自定义指令是否完整复制（这是最常见的问题）
+   - 确保每个模式启用了正确的工具
+   - 确保在发出命令前切换到了对应智能体
+   - 确保指令粘贴在“提示词”文本框中
 
-3. **Command execution issues**:
-   - Ensure you're running commands from the correct directory
-   - Verify platform-specific commands are being used correctly
+2. **规则未加载：**
+   - 检查 `.cursor/rules/isolation_rules/` 是否放置在正确位置
+   - 检查文件权限，确保允许读取
 
-## Version Information
+3. **命令执行失败**:
+   - 确保您在正确的目录中运行命令
+   - 检查是否使用了针对平台的正确命令（如 Windows/Linux）
+
+## 原项目版本信息
 
 This is version v0.7-beta of the Memory Bank system. It introduces significant token optimization improvements over v0.6-beta while maintaining all functionality. See the [Release Notes](RELEASE_NOTES.md) for detailed information about the changes.
 
@@ -235,7 +235,7 @@ The Memory Bank system is actively being developed and improved. Key points to u
 - **Previous Version Available**: If you prefer the stability of the previous version (v0.1-legacy), you can continue using it while this version matures.
 - **Architectural Benefits**: Before deciding which version to use, please read the [Memory Bank Upgrade Guide](memory_bank_upgrade_guide.md) to understand the significant benefits of the new architecture.
 
-## Resources
+## 相关文档
 
 - [Memory Bank Optimizations](MEMORY_BANK_OPTIMIZATIONS.md) - Detailed overview of token efficiency improvements
 - [Release Notes](RELEASE_NOTES.md) - Information about the latest changes
